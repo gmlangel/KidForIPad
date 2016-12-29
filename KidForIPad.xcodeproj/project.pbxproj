@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		038816C19776AED263C3B355 /* Pods_KidForIPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE99D69067CA524735341637 /* Pods_KidForIPad.framework */; };
 		4EEEA9551E1520CE0098CA01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA9541E1520CE0098CA01 /* AppDelegate.swift */; };
 		4EEEA9571E1520CE0098CA01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA9561E1520CE0098CA01 /* ViewController.swift */; };
 		4EEEA95A1E1520CE0098CA01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EEEA9581E1520CE0098CA01 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038816C19776AED263C3B355 /* Pods_KidForIPad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EEEA9611E1520CE0098CA01 /* Build configuration list for PBXNativeTarget "KidForIPad" */;
 			buildPhases = (
+				9DB33AF55A738EB8EBC204CB /* [CP] Check Pods Manifest.lock */,
 				4EEEA94E1E1520CE0098CA01 /* Sources */,
 				4EEEA94F1E1520CE0098CA01 /* Frameworks */,
 				4EEEA9501E1520CE0098CA01 /* Resources */,
+				FB4FBFDD399615E57F5C834D /* [CP] Embed Pods Frameworks */,
+				A60AB901C15877AF8FE525A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9DB33AF55A738EB8EBC204CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A60AB901C15877AF8FE525A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KidForIPad/Pods-KidForIPad-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB4FBFDD399615E57F5C834D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KidForIPad/Pods-KidForIPad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4EEEA94E1E1520CE0098CA01 /* Sources */ = {
@@ -271,6 +324,7 @@
 		};
 		4EEEA9621E1520CE0098CA01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56D16CA60A1B3A9E10A7A0F8 /* Pods-KidForIPad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KidForIPad/Info.plist;
@@ -282,6 +336,7 @@
 		};
 		4EEEA9631E1520CE0098CA01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB5DF70FB623406655B696F3 /* Pods-KidForIPad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KidForIPad/Info.plist;
@@ -310,6 +365,7 @@
 				4EEEA9631E1520CE0098CA01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
