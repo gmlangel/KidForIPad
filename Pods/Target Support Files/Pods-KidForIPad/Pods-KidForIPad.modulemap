@@ -1,0 +1,6 @@
+framework module Pods_KidForIPad {
+  umbrella header "Pods-KidForIPad-umbrella.h"
+
+  export *
+  module * { export * }
+}
