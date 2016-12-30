@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "AssetsExportDemoViewController.(beginExportAssets(AnyObject) -&gt; ()).(closure #1):AssetsExportDemoViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "story.instantiateControllerWithIdentifier(&quot;tishipanel&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AssetsExportTool.(exportAssetsByPath(String, targetPath : String, onComplete : () -&gt; (), onError : (NSError) -&gt; ()) -&gt; ()).(closure #1):AssetsExportTool.swift">
          <PersistentStrings>
             <PersistentString

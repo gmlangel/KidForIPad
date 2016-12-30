@@ -22,6 +22,9 @@
 		4EEEA9811E1636E60098CA01 /* AssetsExportTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA9801E1636E60098CA01 /* AssetsExportTool.swift */; };
 		4EEEA9831E163DB10098CA01 /* CTErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA9821E163DB10098CA01 /* CTErrorEnum.swift */; };
 		4EEEA9841E163DB10098CA01 /* CTErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA9821E163DB10098CA01 /* CTErrorEnum.swift */; };
+		4EEEA9901E165FAB0098CA01 /* AssetsExportDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA98F1E165FAB0098CA01 /* AssetsExportDemoViewController.swift */; };
+		4EEEA99A1E166BFB0098CA01 /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA9991E166BFB0098CA01 /* DropView.swift */; };
+		4EEEA99C1E1674260098CA01 /* Tishi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA99B1E1674260098CA01 /* Tishi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,11 @@
 		4EEEA97D1E16350D0098CA01 /* CustomAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CustomAssets; sourceTree = "<group>"; };
 		4EEEA9801E1636E60098CA01 /* AssetsExportTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsExportTool.swift; sourceTree = "<group>"; };
 		4EEEA9821E163DB10098CA01 /* CTErrorEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTErrorEnum.swift; sourceTree = "<group>"; };
+		4EEEA98F1E165FAB0098CA01 /* AssetsExportDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsExportDemoViewController.swift; sourceTree = "<group>"; };
+		4EEEA9961E1662C00098CA01 /* KidForMacHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KidForMacHeader.h; sourceTree = "<group>"; };
+		4EEEA9971E16630E0098CA01 /* KidForIPadHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KidForIPadHeader.h; sourceTree = "<group>"; };
+		4EEEA9991E166BFB0098CA01 /* DropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
+		4EEEA99B1E1674260098CA01 /* Tishi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tishi.swift; sourceTree = "<group>"; };
 		56D16CA60A1B3A9E10A7A0F8 /* Pods-KidForIPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidForIPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KidForIPad/Pods-KidForIPad.debug.xcconfig"; sourceTree = "<group>"; };
 		EB5DF70FB623406655B696F3 /* Pods-KidForIPad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidForIPad.release.xcconfig"; path = "Pods/Target Support Files/Pods-KidForIPad/Pods-KidForIPad.release.xcconfig"; sourceTree = "<group>"; };
 		FE99D69067CA524735341637 /* Pods_KidForIPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KidForIPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,12 +106,15 @@
 		4EEEA9531E1520CE0098CA01 /* KidForIPad */ = {
 			isa = PBXGroup;
 			children = (
+				4EEEA9911E165FBD0098CA01 /* demo */,
+				4EEEA9921E165FBD0098CA01 /* tools */,
 				4EEEA9541E1520CE0098CA01 /* AppDelegate.swift */,
 				4EEEA9561E1520CE0098CA01 /* ViewController.swift */,
 				4EEEA9581E1520CE0098CA01 /* Main.storyboard */,
 				4EEEA95B1E1520CE0098CA01 /* Assets.xcassets */,
 				4EEEA95D1E1520CE0098CA01 /* LaunchScreen.storyboard */,
 				4EEEA9601E1520CE0098CA01 /* Info.plist */,
+				4EEEA9971E16630E0098CA01 /* KidForIPadHeader.h */,
 			);
 			path = KidForIPad;
 			sourceTree = "<group>";
@@ -111,11 +122,15 @@
 		4EEEA9691E1603720098CA01 /* KidForMac */ = {
 			isa = PBXGroup;
 			children = (
+				4EEEA9981E166B050098CA01 /* controls */,
+				4EEEA98E1E165FAB0098CA01 /* demo */,
 				4EEEA97F1E1636650098CA01 /* tools */,
 				4EEEA96A1E1603720098CA01 /* AppDelegate.swift */,
+				4EEEA99B1E1674260098CA01 /* Tishi.swift */,
 				4EEEA96C1E1603720098CA01 /* ViewController.swift */,
 				4EEEA9701E1603730098CA01 /* Main.storyboard */,
 				4EEEA9731E1603730098CA01 /* Info.plist */,
+				4EEEA9961E1662C00098CA01 /* KidForMacHeader.h */,
 			);
 			path = KidForMac;
 			sourceTree = "<group>";
@@ -135,6 +150,36 @@
 				4EEEA9801E1636E60098CA01 /* AssetsExportTool.swift */,
 			);
 			path = tools;
+			sourceTree = "<group>";
+		};
+		4EEEA98E1E165FAB0098CA01 /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				4EEEA98F1E165FAB0098CA01 /* AssetsExportDemoViewController.swift */,
+			);
+			path = demo;
+			sourceTree = "<group>";
+		};
+		4EEEA9911E165FBD0098CA01 /* demo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = demo;
+			sourceTree = "<group>";
+		};
+		4EEEA9921E165FBD0098CA01 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		4EEEA9981E166B050098CA01 /* controls */ = {
+			isa = PBXGroup;
+			children = (
+				4EEEA9991E166BFB0098CA01 /* DropView.swift */,
+			);
+			path = controls;
 			sourceTree = "<group>";
 		};
 		7EEE90177D3EEEDC0EF58E84 /* Pods */ = {
@@ -194,7 +239,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = KidForIPad;
+				ORGANIZATIONNAME = KidForMac;
 				TargetAttributes = {
 					4EEEA9511E1520CE0098CA01 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -309,11 +354,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EEEA9901E165FAB0098CA01 /* AssetsExportDemoViewController.swift in Sources */,
 				4EEEA9811E1636E60098CA01 /* AssetsExportTool.swift in Sources */,
 				4EEEA97C1E1605660098CA01 /* CTLoader.swift in Sources */,
+				4EEEA99A1E166BFB0098CA01 /* DropView.swift in Sources */,
 				4EEEA9841E163DB10098CA01 /* CTErrorEnum.swift in Sources */,
 				4EEEA96D1E1603720098CA01 /* ViewController.swift in Sources */,
 				4EEEA96B1E1603720098CA01 /* AppDelegate.swift in Sources */,
+				4EEEA99C1E1674260098CA01 /* Tishi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +489,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.51talkiosDeveloper.KidForIPad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = KidForIpad/KidForIPadHeader.h;
 			};
 			name = Debug;
 		};
@@ -453,6 +502,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.51talkiosDeveloper.KidForIPad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = KidForIpad/KidForIPadHeader.h;
 			};
 			name = Release;
 		};
@@ -468,6 +518,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.51talkiosDeveloper.KidForMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = KidForMac/KidForMacHeader.h;
 			};
 			name = Debug;
 		};
@@ -483,6 +534,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.51talkiosDeveloper.KidForMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = KidForMac/KidForMacHeader.h;
 			};
 			name = Release;
 		};
@@ -514,6 +566,7 @@
 				4EEEA9751E1603730098CA01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

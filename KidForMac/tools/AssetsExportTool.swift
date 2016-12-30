@@ -46,6 +46,7 @@ class AssetsExportTool:NSObject{
                        try NSFileManager.defaultManager().createDirectoryAtPath(targetPath, withIntermediateDirectories: true, attributes: nil)
                     }catch{
                         self.dispatchErrorToMainThread(NSError(domain: "org.gml.err", code: CTErrorEnum.AssetsExport_TargetPath_CreateFaild.rawValue, userInfo: nil), onError: onError);
+                        return;
                     }
                 }
                 
@@ -61,7 +62,7 @@ class AssetsExportTool:NSObject{
                             //开始copy
                             do{
                                 sP = sourcePath + "/" + subPath;
-                                tP = targetPath + subPath.stringByReplacingOccurrencesOfString(".imageset/", withString: "/")
+                                tP = targetPath + "/" + subPath.stringByReplacingOccurrencesOfString(".imageset/", withString: "/")
                                 let fileDic = NSString(string: tP).stringByDeletingLastPathComponent;
                                 if self.getFilePathType(fileDic) != .directory{
                                     //如果路径不存在，则创建这个路径
@@ -70,9 +71,13 @@ class AssetsExportTool:NSObject{
                                 try NSFileManager.defaultManager().copyItemAtPath(sP, toPath: tP);
                             }catch{
                                 self.dispatchErrorToMainThread(NSError(domain: "org.gml.err", code: CTErrorEnum.AssetsExport_TargetPath_CreateFaild.rawValue, userInfo: nil), onError: onError);
+                                return;
                             }
                         }
                     }
+                    dispatch_async(dispatch_get_main_queue(), { 
+                        onComplete();//copy完毕
+                    })
                 }catch{
                     self.dispatchErrorToMainThread(NSError(domain: "org.gml.err", code: CTErrorEnum.AssetsExport_TargetPath_CreateFaild.rawValue, userInfo: nil), onError: onError);
                 }

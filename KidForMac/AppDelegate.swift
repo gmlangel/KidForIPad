@@ -15,18 +15,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
-        let targetPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] + "/KidForIpadAssets/";
-        AssetsExportTool.instance.exportAssetsByPath("/Users/guominglong/Desktop/ACSwift/IGS_Pro/TK_IGS_iPad_Swift/Assets.xcassets", targetPath: targetPath, onComplete: { 
-            NSLog("资源导出成功");
-            }) { (ne) in
-                NSLog("\(ne.code)");
-        }
+        
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
-
+    //MARK:资源导出功能
+    @IBAction func exportAssets(sender: AnyObject) {
+        let story = NSStoryboard.init(name: "Main", bundle: NSBundle.mainBundle());
+        let vc = story.instantiateControllerWithIdentifier("AssetsExportStory") as! NSViewController;
+        NSApplication.sharedApplication().runModalForWindow(NSWindow(contentViewController: vc));
+    }
 
 }
 
