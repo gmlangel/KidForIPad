@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>KidForMac.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>4EEEA9511E1520CE0098CA01</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4EEEA9671E1603720098CA01</key>
 		<dict>
 			<key>primary</key>
 			<true/>
