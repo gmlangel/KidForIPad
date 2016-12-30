@@ -15,6 +15,6 @@ class Tishi: NSViewController {
     @IBOutlet weak var tb_tishi: NSTextField!
     @IBAction func ongClose(sender: AnyObject) {
         
-        self.view.window?.performClose(self);
+        self.dismissController(self);
     }
 }

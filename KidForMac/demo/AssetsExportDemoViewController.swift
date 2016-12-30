@@ -34,7 +34,7 @@ class AssetsExportDemoViewController: NSViewController {
         let story = NSStoryboard.init(name: "Main", bundle: NSBundle.mainBundle());
         let vc = story.instantiateControllerWithIdentifier("TishiPanelStory") as! Tishi;
         vc.tishiStr = str;
-        NSApplication.sharedApplication().runModalForWindow(NSWindow(contentViewController: vc));
+        self.presentViewControllerAsModalWindow(vc);
     }
     @IBOutlet weak var tb_targetTextfield: NSTextField!
 }
