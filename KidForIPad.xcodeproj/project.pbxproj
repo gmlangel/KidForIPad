@@ -24,6 +24,8 @@
 		4EF780831E18A4CD0047EAD1 /* CTLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA97A1E1605660098CA01 /* CTLoader.swift */; };
 		4EF780841E18A4D00047EAD1 /* CTErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA9821E163DB10098CA01 /* CTErrorEnum.swift */; };
 		4EF780851E18A6A90047EAD1 /* CustomAssets in Resources */ = {isa = PBXBuildFile; fileRef = 4EEEA97D1E16350D0098CA01 /* CustomAssets */; };
+		4EF780861E18B2B50047EAD1 /* CustomAssets in Resources */ = {isa = PBXBuildFile; fileRef = 4EEEA97D1E16350D0098CA01 /* CustomAssets */; };
+		4EF780881E18B3160047EAD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF780871E18B3160047EAD1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,7 @@
 		4EF780791E18A37C0047EAD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EF7807B1E18A37C0047EAD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EF780821E18A4670047EAD1 /* KidForIOSHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KidForIOSHeader.h; sourceTree = "<group>"; };
+		4EF780871E18B3160047EAD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56D16CA60A1B3A9E10A7A0F8 /* Pods-KidForIPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidForIPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KidForIPad/Pods-KidForIPad.debug.xcconfig"; sourceTree = "<group>"; };
 		EB5DF70FB623406655B696F3 /* Pods-KidForIPad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidForIPad.release.xcconfig"; path = "Pods/Target Support Files/Pods-KidForIPad/Pods-KidForIPad.release.xcconfig"; sourceTree = "<group>"; };
 		FE99D69067CA524735341637 /* Pods_KidForIPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KidForIPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +111,7 @@
 				4EEEA98E1E165FAB0098CA01 /* demo */,
 				4EEEA97F1E1636650098CA01 /* tools */,
 				4EEEA96A1E1603720098CA01 /* AppDelegate.swift */,
+				4EF780871E18B3160047EAD1 /* Assets.xcassets */,
 				4EEEA99B1E1674260098CA01 /* Tishi.swift */,
 				4EEEA96C1E1603720098CA01 /* ViewController.swift */,
 				4EEEA9701E1603730098CA01 /* Main.storyboard */,
@@ -279,6 +283,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EF780861E18B2B50047EAD1 /* CustomAssets in Resources */,
+				4EF780881E18B3160047EAD1 /* Assets.xcassets in Resources */,
 				4EEEA9721E1603730098CA01 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
