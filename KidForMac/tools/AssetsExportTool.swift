@@ -29,7 +29,7 @@ class AssetsExportTool:NSObject{
      @param  onError  导出失败的回调
      */
     func exportAssetsByPath(_ sourcePath:String,targetPath:String,onComplete:@escaping ()->Void,onError:@escaping (NSError)->Void){
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.background).async {
+        DispatchQueue.global().async {
             
             //判断路径是否为空字符串，  判断是否是一个合法路径
             var type = self.getFilePathType(sourcePath)

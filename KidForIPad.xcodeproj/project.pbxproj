@@ -26,6 +26,8 @@
 		4EF780851E18A6A90047EAD1 /* CustomAssets in Resources */ = {isa = PBXBuildFile; fileRef = 4EEEA97D1E16350D0098CA01 /* CustomAssets */; };
 		4EF780861E18B2B50047EAD1 /* CustomAssets in Resources */ = {isa = PBXBuildFile; fileRef = 4EEEA97D1E16350D0098CA01 /* CustomAssets */; };
 		4EF780881E18B3160047EAD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF780871E18B3160047EAD1 /* Assets.xcassets */; };
+		4EF7808D1E18BEDC0047EAD1 /* CTResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF7808C1E18BEDC0047EAD1 /* CTResourceManager.swift */; };
+		4EF7808E1E18BEDC0047EAD1 /* CTResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF7808C1E18BEDC0047EAD1 /* CTResourceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,7 @@
 		4EF7807B1E18A37C0047EAD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EF780821E18A4670047EAD1 /* KidForIOSHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KidForIOSHeader.h; sourceTree = "<group>"; };
 		4EF780871E18B3160047EAD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4EF7808C1E18BEDC0047EAD1 /* CTResourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTResourceManager.swift; sourceTree = "<group>"; };
 		56D16CA60A1B3A9E10A7A0F8 /* Pods-KidForIPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidForIPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KidForIPad/Pods-KidForIPad.debug.xcconfig"; sourceTree = "<group>"; };
 		EB5DF70FB623406655B696F3 /* Pods-KidForIPad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidForIPad.release.xcconfig"; path = "Pods/Target Support Files/Pods-KidForIPad/Pods-KidForIPad.release.xcconfig"; sourceTree = "<group>"; };
 		FE99D69067CA524735341637 /* Pods_KidForIPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KidForIPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +129,7 @@
 			children = (
 				4EEEA97A1E1605660098CA01 /* CTLoader.swift */,
 				4EEEA9821E163DB10098CA01 /* CTErrorEnum.swift */,
+				4EF7808C1E18BEDC0047EAD1 /* CTResourceManager.swift */,
 			);
 			path = CurrentTool;
 			sourceTree = "<group>";
@@ -245,7 +249,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = KidForMac;
 				TargetAttributes = {
 					4EEEA9671E1603720098CA01 = {
@@ -311,6 +315,7 @@
 				4EEEA9811E1636E60098CA01 /* AssetsExportTool.swift in Sources */,
 				4EEEA97C1E1605660098CA01 /* CTLoader.swift in Sources */,
 				4EEEA99A1E166BFB0098CA01 /* DropView.swift in Sources */,
+				4EF7808D1E18BEDC0047EAD1 /* CTResourceManager.swift in Sources */,
 				4EEEA9841E163DB10098CA01 /* CTErrorEnum.swift in Sources */,
 				4EEEA96D1E1603720098CA01 /* ViewController.swift in Sources */,
 				4EEEA96B1E1603720098CA01 /* AppDelegate.swift in Sources */,
@@ -322,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EF7808E1E18BEDC0047EAD1 /* CTResourceManager.swift in Sources */,
 				4EF780831E18A4CD0047EAD1 /* CTLoader.swift in Sources */,
 				4EF780721E18A37C0047EAD1 /* ViewController.swift in Sources */,
 				4EF780841E18A4D00047EAD1 /* CTErrorEnum.swift in Sources */,
@@ -373,8 +379,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -396,7 +404,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -419,8 +428,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -436,9 +447,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -452,7 +465,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = KidForMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.51talkiosDeveloper.KidForMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -469,7 +482,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = KidForMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.51talkiosDeveloper.KidForMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;

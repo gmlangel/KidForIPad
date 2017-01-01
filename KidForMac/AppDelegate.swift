@@ -15,7 +15,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
-        
+        CTResourceManager.instance.deleteAllResource();
+        //let res = CTResource();
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

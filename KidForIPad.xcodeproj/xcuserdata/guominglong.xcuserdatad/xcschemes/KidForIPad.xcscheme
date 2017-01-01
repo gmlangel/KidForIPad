@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E91319F1E12699500D6B2AB"
+               BlueprintIdentifier = "4EF7806C1E18A37C0047EAD1"
                BuildableName = "KidForIPad.app"
                BlueprintName = "KidForIPad"
                ReferencedContainer = "container:KidForIPad.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4E91319F1E12699500D6B2AB"
+            BlueprintIdentifier = "4EF7806C1E18A37C0047EAD1"
             BuildableName = "KidForIPad.app"
             BlueprintName = "KidForIPad"
             ReferencedContainer = "container:KidForIPad.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4E91319F1E12699500D6B2AB"
+            BlueprintIdentifier = "4EF7806C1E18A37C0047EAD1"
             BuildableName = "KidForIPad.app"
             BlueprintName = "KidForIPad"
             ReferencedContainer = "container:KidForIPad.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4E91319F1E12699500D6B2AB"
+            BlueprintIdentifier = "4EF7806C1E18A37C0047EAD1"
             BuildableName = "KidForIPad.app"
             BlueprintName = "KidForIPad"
             ReferencedContainer = "container:KidForIPad.xcodeproj">
