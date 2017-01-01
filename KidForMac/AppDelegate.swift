@@ -25,9 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func exportAssets(_ sender: AnyObject) {
         let story = NSStoryboard.init(name: "Main", bundle: Bundle.main);
         let vc = story.instantiateController(withIdentifier: "AssetsExportStory") as! NSViewController;
-        NSApplication.shared().runModal(for: NSWindow(contentViewController: vc));
-        
-        NSApplication.shared().mainWindow
+        NSApplication.shared().mainWindow?.contentViewController?.presentViewControllerAsModalWindow(vc);
     }
 
 }
