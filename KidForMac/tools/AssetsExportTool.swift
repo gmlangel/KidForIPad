@@ -28,58 +28,58 @@ class AssetsExportTool:NSObject{
      @param  onComplete 导出成功的回调
      @param  onError  导出失败的回调
      */
-    func exportAssetsByPath(sourcePath:String,targetPath:String,onComplete:()->Void,onError:(NSError)->Void){
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) {
+    func exportAssetsByPath(_ sourcePath:String,targetPath:String,onComplete:@escaping ()->Void,onError:@escaping (NSError)->Void){
+        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.background).async {
             
             //判断路径是否为空字符串，  判断是否是一个合法路径
             var type = self.getFilePathType(sourcePath)
             if type != .directory{
-                self.dispatchErrorToMainThread(NSError(domain: "org.gml.err", code: CTErrorEnum.AssetsExport_SourcePath_Illegal.rawValue, userInfo: nil), onError: onError);
+                self.dispatchErrorToMainThread(NSError(domain: "org.gml.err", code: CTErrorEnum.assetsExport_SourcePath_Illegal.rawValue, userInfo: nil), onError: onError);
             }else{
                 //判断目标存储路径是否存在，如果不存在则创建
                 type = self.getFilePathType(targetPath)
                 if type == .no{
-                    self.dispatchErrorToMainThread(NSError(domain: "org.gml.err", code: CTErrorEnum.AssetsExport_SourcePath_Illegal.rawValue, userInfo: nil), onError: onError);
+                    self.dispatchErrorToMainThread(NSError(domain: "org.gml.err", code: CTErrorEnum.assetsExport_SourcePath_Illegal.rawValue, userInfo: nil), onError: onError);
                 }else if type != .directory{
                     //需要创建目录
                     do{
-                       try NSFileManager.defaultManager().createDirectoryAtPath(targetPath, withIntermediateDirectories: true, attributes: nil)
+                       try FileManager.default.createDirectory(atPath: targetPath, withIntermediateDirectories: true, attributes: nil)
                     }catch{
-                        self.dispatchErrorToMainThread(NSError(domain: "org.gml.err", code: CTErrorEnum.AssetsExport_TargetPath_CreateFaild.rawValue, userInfo: nil), onError: onError);
+                        self.dispatchErrorToMainThread(NSError(domain: "org.gml.err", code: CTErrorEnum.assetsExport_TargetPath_CreateFaild.rawValue, userInfo: nil), onError: onError);
                         return;
                     }
                 }
                 
                 //开始copy文件
                 do{
-                    let sourceFiles = try NSFileManager.defaultManager().subpathsOfDirectoryAtPath(sourcePath)
+                    let sourceFiles = try FileManager.default.subpathsOfDirectory(atPath: sourcePath)
                     //source目录下包括子目录下的所有文件，将图片copy到target目录中
                     var sP = "";
                     var tP = "";
                     for subPath in sourceFiles{
-                        let exten = NSString(string: subPath).pathExtension.lowercaseString;//取文件的尾缀，判断是否应该copy
+                        let exten = NSString(string: subPath).pathExtension.lowercased();//取文件的尾缀，判断是否应该copy
                         if exten == "png" || exten == "jpg" || exten == "tiff"{
                             //开始copy
                             do{
                                 sP = sourcePath + "/" + subPath;
-                                tP = targetPath + "/" + subPath.stringByReplacingOccurrencesOfString(".imageset/", withString: "/")
-                                let fileDic = NSString(string: tP).stringByDeletingLastPathComponent;
+                                tP = targetPath + "/" + subPath.replacingOccurrences(of: ".imageset/", with: "/")
+                                let fileDic = NSString(string: tP).deletingLastPathComponent;
                                 if self.getFilePathType(fileDic) != .directory{
                                     //如果路径不存在，则创建这个路径
-                                    try NSFileManager.defaultManager().createDirectoryAtPath(fileDic, withIntermediateDirectories: true, attributes: nil)
+                                    try FileManager.default.createDirectory(atPath: fileDic, withIntermediateDirectories: true, attributes: nil)
                                 }
-                                try NSFileManager.defaultManager().copyItemAtPath(sP, toPath: tP);
+                                try FileManager.default.copyItem(atPath: sP, toPath: tP);
                             }catch{
-                                self.dispatchErrorToMainThread(NSError(domain: "org.gml.err", code: CTErrorEnum.AssetsExport_TargetPath_CreateFaild.rawValue, userInfo: nil), onError: onError);
+                                self.dispatchErrorToMainThread(NSError(domain: "org.gml.err", code: CTErrorEnum.assetsExport_TargetPath_CreateFaild.rawValue, userInfo: nil), onError: onError);
                                 return;
                             }
                         }
                     }
-                    dispatch_async(dispatch_get_main_queue(), { 
+                    DispatchQueue.main.async(execute: { 
                         onComplete();//copy完毕
                     })
                 }catch{
-                    self.dispatchErrorToMainThread(NSError(domain: "org.gml.err", code: CTErrorEnum.AssetsExport_TargetPath_CreateFaild.rawValue, userInfo: nil), onError: onError);
+                    self.dispatchErrorToMainThread(NSError(domain: "org.gml.err", code: CTErrorEnum.assetsExport_TargetPath_CreateFaild.rawValue, userInfo: nil), onError: onError);
                 }
             }
             
@@ -90,8 +90,8 @@ class AssetsExportTool:NSObject{
     /**
      将错误信息派发到主线程
      */
-    private func dispatchErrorToMainThread(err:NSError,onError:(NSError)->Void){
-        dispatch_async(dispatch_get_main_queue()) { 
+    fileprivate func dispatchErrorToMainThread(_ err:NSError,onError:@escaping (NSError)->Void){
+        DispatchQueue.main.async { 
             onError(err);
         }
     }
@@ -99,11 +99,11 @@ class AssetsExportTool:NSObject{
     /**
      检查某一个路径的类型
      */
-    private func getFilePathType(sourcePath:String)->FilePathType{
+    fileprivate func getFilePathType(_ sourcePath:String)->FilePathType{
         var b:ObjCBool = true;
         if sourcePath == ""{
             return FilePathType.no;
-        }else if NSFileManager.defaultManager().fileExistsAtPath(sourcePath, isDirectory: &b){
+        }else if FileManager.default.fileExists(atPath: sourcePath, isDirectory: &b){
             return FilePathType.directory;
         }else{
             return FilePathType.file;

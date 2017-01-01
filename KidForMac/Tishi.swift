@@ -13,8 +13,8 @@ class Tishi: NSViewController {
         tb_tishi.stringValue = tishiStr;
     }
     @IBOutlet weak var tb_tishi: NSTextField!
-    @IBAction func ongClose(sender: AnyObject) {
+    @IBAction func ongClose(_ sender: AnyObject) {
         
-        self.dismissController(self);
+        self.dismiss(self);
     }
 }

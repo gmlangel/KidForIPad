@@ -13,19 +13,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
+    func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
     //MARK:资源导出功能
-    @IBAction func exportAssets(sender: AnyObject) {
-        let story = NSStoryboard.init(name: "Main", bundle: NSBundle.mainBundle());
-        let vc = story.instantiateControllerWithIdentifier("AssetsExportStory") as! NSViewController;
-        NSApplication.sharedApplication().runModalForWindow(NSWindow(contentViewController: vc));
+    @IBAction func exportAssets(_ sender: AnyObject) {
+        let story = NSStoryboard.init(name: "Main", bundle: Bundle.main);
+        let vc = story.instantiateController(withIdentifier: "AssetsExportStory") as! NSViewController;
+        NSApplication.shared().runModal(for: NSWindow(contentViewController: vc));
+        
+        NSApplication.shared().mainWindow
     }
 
 }

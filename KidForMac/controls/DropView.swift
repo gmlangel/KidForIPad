@@ -10,19 +10,19 @@ import Foundation
 class DropView: NSView {
     required init?(coder: NSCoder) {
         super.init(coder: coder);
-        self.registerForDraggedTypes([NSFilenamesPboardType])
+        self.register(forDraggedTypes: [NSFilenamesPboardType])
     }
     
-    override func draggingEntered(sender: NSDraggingInfo) -> NSDragOperation {
-        return NSDragOperation.Copy;
+    override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
+        return NSDragOperation.copy;
     }
     
-    override func prepareForDragOperation(sender: NSDraggingInfo) -> Bool {
+    override func prepareForDragOperation(_ sender: NSDraggingInfo) -> Bool {
         return true;
     }
     
-    override func performDragOperation(sender: NSDraggingInfo) -> Bool {
-        let arr = sender.draggingPasteboard().propertyListForType(NSFilenamesPboardType) as? [String];
+    override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
+        let arr = sender.draggingPasteboard().propertyList(forType: NSFilenamesPboardType) as? [String];
         if arr != nil && arr!.count > 0{
             let dicPath = arr![0];
             

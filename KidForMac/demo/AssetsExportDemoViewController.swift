@@ -16,7 +16,7 @@ class AssetsExportDemoViewController: NSViewController {
     /**
      开始导出资源
      */
-    @IBAction func beginExportAssets(sender: AnyObject) {
+    @IBAction func beginExportAssets(_ sender: AnyObject) {
         
         if tb_sourceTextfield.stringValue != "" && tb_targetTextfield.stringValue != "" && tb_sourceTextfield.stringValue != tb_targetTextfield.stringValue{
             AssetsExportTool.instance.exportAssetsByPath(tb_sourceTextfield.stringValue, targetPath: tb_targetTextfield.stringValue, onComplete: { [weak self] in
@@ -30,9 +30,9 @@ class AssetsExportDemoViewController: NSViewController {
         }
     }
     
-    func alert(str:String){
-        let story = NSStoryboard.init(name: "Main", bundle: NSBundle.mainBundle());
-        let vc = story.instantiateControllerWithIdentifier("TishiPanelStory") as! Tishi;
+    func alert(_ str:String){
+        let story = NSStoryboard.init(name: "Main", bundle: Bundle.main);
+        let vc = story.instantiateController(withIdentifier: "TishiPanelStory") as! Tishi;
         vc.tishiStr = str;
         self.presentViewControllerAsModalWindow(vc);
     }

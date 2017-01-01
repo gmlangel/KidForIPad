@@ -8,11 +8,11 @@
 
 import Foundation
 class CTLoader: NSObject {
-    func loadFile(file:String,onComplete:(NSData?)->Void){
-        if let url = NSURL(string: file){
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) {
-                let nd = NSData(contentsOfURL: url);
-                dispatch_async(dispatch_get_main_queue(), {
+    func loadFile(_ file:String,onComplete:@escaping (Data?)->Void){
+        if let url = URL(string: file){
+            DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.background).async {
+                let nd = try? Data(contentsOf: url);
+                DispatchQueue.main.async(execute: {
                     onComplete(nd);
                 })
             }
