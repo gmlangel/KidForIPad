@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E7EBF6D1E19FA28001A57D0 /* SuportsTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EBF6C1E19FA28001A57D0 /* SuportsTool.swift */; };
+		4E7EBF6F1E19FC0D001A57D0 /* PushNotificationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EBF6E1E19FC0D001A57D0 /* PushNotificationTool.swift */; };
+		4E7EBF711E19FFFC001A57D0 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E7EBF701E19FFFC001A57D0 /* UserNotifications.framework */; };
 		4EEEA96B1E1603720098CA01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA96A1E1603720098CA01 /* AppDelegate.swift */; };
 		4EEEA96D1E1603720098CA01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA96C1E1603720098CA01 /* ViewController.swift */; };
 		4EEEA9721E1603730098CA01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EEEA9701E1603730098CA01 /* Main.storyboard */; };
@@ -31,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E7EBF6C1E19FA28001A57D0 /* SuportsTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuportsTool.swift; sourceTree = "<group>"; };
+		4E7EBF6E1E19FC0D001A57D0 /* PushNotificationTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationTool.swift; sourceTree = "<group>"; };
+		4E7EBF701E19FFFC001A57D0 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		4E7EBF721E1A05B7001A57D0 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		4EEEA9681E1603720098CA01 /* KidForMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidForMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EEEA96A1E1603720098CA01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EEEA96C1E1603720098CA01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E7EBF711E19FFFC001A57D0 /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +88,8 @@
 		053F6478FEC3D3399B209B55 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E7EBF721E1A05B7001A57D0 /* UserNotificationsUI.framework */,
+				4E7EBF701E19FFFC001A57D0 /* UserNotifications.framework */,
 				FE99D69067CA524735341637 /* Pods_KidForIPad.framework */,
 			);
 			name = Frameworks;
@@ -192,6 +202,8 @@
 		4EF780811E18A43B0047EAD1 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				4E7EBF6C1E19FA28001A57D0 /* SuportsTool.swift */,
+				4E7EBF6E1E19FC0D001A57D0 /* PushNotificationTool.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -331,6 +343,8 @@
 				4EF780831E18A4CD0047EAD1 /* CTLoader.swift in Sources */,
 				4EF780721E18A37C0047EAD1 /* ViewController.swift in Sources */,
 				4EF780841E18A4D00047EAD1 /* CTErrorEnum.swift in Sources */,
+				4E7EBF6F1E19FC0D001A57D0 /* PushNotificationTool.swift in Sources */,
+				4E7EBF6D1E19FA28001A57D0 /* SuportsTool.swift in Sources */,
 				4EF780701E18A37C0047EAD1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,6 +573,7 @@
 				4EF7807E1E18A37C0047EAD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
