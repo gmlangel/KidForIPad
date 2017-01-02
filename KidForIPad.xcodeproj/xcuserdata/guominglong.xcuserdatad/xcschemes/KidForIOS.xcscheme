@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4EF7806C1E18A37C0047EAD1"
-               BuildableName = "KidForIPad.app"
-               BlueprintName = "KidForIPad"
+               BlueprintIdentifier = "4E7EBF791E1A45CB001A57D0"
+               BuildableName = "KidForIOS.app"
+               BlueprintName = "KidForIOS"
                ReferencedContainer = "container:KidForIPad.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4EF7806C1E18A37C0047EAD1"
-            BuildableName = "KidForIPad.app"
-            BlueprintName = "KidForIPad"
+            BlueprintIdentifier = "4E7EBF791E1A45CB001A57D0"
+            BuildableName = "KidForIOS.app"
+            BlueprintName = "KidForIOS"
             ReferencedContainer = "container:KidForIPad.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4EF7806C1E18A37C0047EAD1"
-            BuildableName = "KidForIPad.app"
-            BlueprintName = "KidForIPad"
+            BlueprintIdentifier = "4E7EBF791E1A45CB001A57D0"
+            BuildableName = "KidForIOS.app"
+            BlueprintName = "KidForIOS"
             ReferencedContainer = "container:KidForIPad.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4EF7806C1E18A37C0047EAD1"
-            BuildableName = "KidForIPad.app"
-            BlueprintName = "KidForIPad"
+            BlueprintIdentifier = "4E7EBF791E1A45CB001A57D0"
+            BuildableName = "KidForIOS.app"
+            BlueprintName = "KidForIOS"
             ReferencedContainer = "container:KidForIPad.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

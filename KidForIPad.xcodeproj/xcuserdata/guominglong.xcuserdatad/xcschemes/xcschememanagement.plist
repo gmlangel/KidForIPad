@@ -4,10 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>KidForIPad.xcscheme</key>
+		<key>KidForIOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>10</integer>
 		</dict>
 		<key>KidForMac.xcscheme</key>
 		<dict>
@@ -17,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>4E7EBF791E1A45CB001A57D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4E91319F1E12699500D6B2AB</key>
 		<dict>
 			<key>primary</key>
