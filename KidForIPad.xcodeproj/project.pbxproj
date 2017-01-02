@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E7EBF6D1E19FA28001A57D0 /* SuportsTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EBF6C1E19FA28001A57D0 /* SuportsTool.swift */; };
-		4E7EBF6F1E19FC0D001A57D0 /* PushNotificationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EBF6E1E19FC0D001A57D0 /* PushNotificationTool.swift */; };
-		4E7EBF711E19FFFC001A57D0 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E7EBF701E19FFFC001A57D0 /* UserNotifications.framework */; };
 		4EEEA96B1E1603720098CA01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA96A1E1603720098CA01 /* AppDelegate.swift */; };
 		4EEEA96D1E1603720098CA01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA96C1E1603720098CA01 /* ViewController.swift */; };
 		4EEEA9721E1603730098CA01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EEEA9701E1603730098CA01 /* Main.storyboard */; };
@@ -19,18 +16,9 @@
 		4EEEA9901E165FAB0098CA01 /* AssetsExportDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA98F1E165FAB0098CA01 /* AssetsExportDemoViewController.swift */; };
 		4EEEA99A1E166BFB0098CA01 /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA9991E166BFB0098CA01 /* DropView.swift */; };
 		4EEEA99C1E1674260098CA01 /* Tishi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA99B1E1674260098CA01 /* Tishi.swift */; };
-		4EF780701E18A37C0047EAD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF7806F1E18A37C0047EAD1 /* AppDelegate.swift */; };
-		4EF780721E18A37C0047EAD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF780711E18A37C0047EAD1 /* ViewController.swift */; };
-		4EF780751E18A37C0047EAD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF780731E18A37C0047EAD1 /* Main.storyboard */; };
-		4EF780771E18A37C0047EAD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF780761E18A37C0047EAD1 /* Assets.xcassets */; };
-		4EF7807A1E18A37C0047EAD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF780781E18A37C0047EAD1 /* LaunchScreen.storyboard */; };
-		4EF780831E18A4CD0047EAD1 /* CTLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA97A1E1605660098CA01 /* CTLoader.swift */; };
-		4EF780841E18A4D00047EAD1 /* CTErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA9821E163DB10098CA01 /* CTErrorEnum.swift */; };
-		4EF780851E18A6A90047EAD1 /* CustomAssets in Resources */ = {isa = PBXBuildFile; fileRef = 4EEEA97D1E16350D0098CA01 /* CustomAssets */; };
 		4EF780861E18B2B50047EAD1 /* CustomAssets in Resources */ = {isa = PBXBuildFile; fileRef = 4EEEA97D1E16350D0098CA01 /* CustomAssets */; };
 		4EF780881E18B3160047EAD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF780871E18B3160047EAD1 /* Assets.xcassets */; };
 		4EF7808D1E18BEDC0047EAD1 /* CTResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF7808C1E18BEDC0047EAD1 /* CTResourceManager.swift */; };
-		4EF7808E1E18BEDC0047EAD1 /* CTResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF7808C1E18BEDC0047EAD1 /* CTResourceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +39,6 @@
 		4EEEA9961E1662C00098CA01 /* KidForMacHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KidForMacHeader.h; sourceTree = "<group>"; };
 		4EEEA9991E166BFB0098CA01 /* DropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
 		4EEEA99B1E1674260098CA01 /* Tishi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tishi.swift; sourceTree = "<group>"; };
-		4EF7806D1E18A37C0047EAD1 /* KidForIPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidForIPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF7806F1E18A37C0047EAD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EF780711E18A37C0047EAD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4EF780741E18A37C0047EAD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,14 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EF7806A1E18A37C0047EAD1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4E7EBF711E19FFFC001A57D0 /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				4EEEA9681E1603720098CA01 /* KidForMac.app */,
-				4EF7806D1E18A37C0047EAD1 /* KidForIPad.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,23 +215,6 @@
 			productReference = 4EEEA9681E1603720098CA01 /* KidForMac.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4EF7806C1E18A37C0047EAD1 /* KidForIPad */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4EF7807C1E18A37C0047EAD1 /* Build configuration list for PBXNativeTarget "KidForIPad" */;
-			buildPhases = (
-				4EF780691E18A37C0047EAD1 /* Sources */,
-				4EF7806A1E18A37C0047EAD1 /* Frameworks */,
-				4EF7806B1E18A37C0047EAD1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = KidForIPad;
-			productName = KidForIPad;
-			productReference = 4EF7806D1E18A37C0047EAD1 /* KidForIPad.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -267,11 +228,6 @@
 					4EEEA9671E1603720098CA01 = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0820;
-					};
-					4EF7806C1E18A37C0047EAD1 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 4YSBG2HZW7;
-						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -289,7 +245,6 @@
 			projectRoot = "";
 			targets = (
 				4EEEA9671E1603720098CA01 /* KidForMac */,
-				4EF7806C1E18A37C0047EAD1 /* KidForIPad */,
 			);
 		};
 /* End PBXProject section */
@@ -302,17 +257,6 @@
 				4EF780861E18B2B50047EAD1 /* CustomAssets in Resources */,
 				4EF780881E18B3160047EAD1 /* Assets.xcassets in Resources */,
 				4EEEA9721E1603730098CA01 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EF7806B1E18A37C0047EAD1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4EF780851E18A6A90047EAD1 /* CustomAssets in Resources */,
-				4EF7807A1E18A37C0047EAD1 /* LaunchScreen.storyboard in Resources */,
-				4EF780771E18A37C0047EAD1 /* Assets.xcassets in Resources */,
-				4EF780751E18A37C0047EAD1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,20 +276,6 @@
 				4EEEA96D1E1603720098CA01 /* ViewController.swift in Sources */,
 				4EEEA96B1E1603720098CA01 /* AppDelegate.swift in Sources */,
 				4EEEA99C1E1674260098CA01 /* Tishi.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EF780691E18A37C0047EAD1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4EF7808E1E18BEDC0047EAD1 /* CTResourceManager.swift in Sources */,
-				4EF780831E18A4CD0047EAD1 /* CTLoader.swift in Sources */,
-				4EF780721E18A37C0047EAD1 /* ViewController.swift in Sources */,
-				4EF780841E18A4D00047EAD1 /* CTErrorEnum.swift in Sources */,
-				4E7EBF6F1E19FC0D001A57D0 /* PushNotificationTool.swift in Sources */,
-				4E7EBF6D1E19FA28001A57D0 /* SuportsTool.swift in Sources */,
-				4EF780701E18A37C0047EAD1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,46 +435,6 @@
 			};
 			name = Release;
 		};
-		4EF7807D1E18A37C0047EAD1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				DEVELOPMENT_TEAM = 4YSBG2HZW7;
-				INFOPLIST_FILE = KidForIPad/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gml.aaaa.KidForIPad;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = KidForIPad/KidForIOSHeader.h;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4EF7807E1E18A37C0047EAD1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				DEVELOPMENT_TEAM = 4YSBG2HZW7;
-				INFOPLIST_FILE = KidForIPad/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gml.aaaa.KidForIPad;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = KidForIPad/KidForIOSHeader.h;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -562,15 +452,6 @@
 			buildConfigurations = (
 				4EEEA9741E1603730098CA01 /* Debug */,
 				4EEEA9751E1603730098CA01 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4EF7807C1E18A37C0047EAD1 /* Build configuration list for PBXNativeTarget "KidForIPad" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4EF7807D1E18A37C0047EAD1 /* Debug */,
-				4EF7807E1E18A37C0047EAD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
