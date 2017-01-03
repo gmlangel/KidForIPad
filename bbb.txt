@@ -1,0 +1,203 @@
+2017-01-03 19:45:28.629 MacLogAnalyze[73911:4620607] ["com.apple.preferences.timezone.selected_city": {
+    AppleMapID = 148639752416948302;
+    CountryCode = CN;
+    Latitude = "39.92889";
+    LocalizedNames =     {
+        "zh-Hans" = "\U5317\U4eac\U5e02";
+    };
+    Longitude = "116.3883";
+    Name = Beijing;
+    Population = 10300723;
+    TimeZoneName = "Asia/Shanghai";
+    Version = 1;
+}, "com.apple.updatesettings_did_disable_ftp": 1, "NSFontSize": 12, "com.apple.springing.enabled": 1, "AppleMetricUnits": 1, "NSQuotedKeystrokeBinding": ^q, "com.apple.trackpad.twoFingerDoubleTapGesture": 1, "com.apple.springing.delay": 0.5, "com.apple.trackpad.fourFingerPinchSwipeGesture": 2, "SGTRecentFileSearches": <__NSCFArray 0x600000066f80>(
+{
+    attributes =     (
+        kMDItemDisplayName
+    );
+    enforceStrictMatch = 0;
+    exactMatch = 0;
+    name = git;
+    scope = 4;
+    type = "com.apple.finder";
+    values =     (
+        git
+    );
+}
+)
+, "com.apple.AppleModemSettingTool.LastCountryCode": CN, "NSSmartCMYKColorConversion": YES, "NSSystemFontSize": 13, "AppleMiniaturizeOnDoubleClick": 0, "NSScrollerButtonAcceleration": 8, "AppleMeasurementUnits": Centimeters, "NSButtonPeriod": 0.075, "NSScrollerKnobCount": 2, "WebAutomaticSpellingCorrectionEnabled": 1, "METAL_DEVICE_WRAPPER_TYPE": 0, "com.apple.trackpad.threeFingerDragGesture": 0, "com.apple.ColorSync.Devices": {
+    "Device.cmra.32316438-3330-3032-3833-616539663562" =     {
+        DeviceDescriptions =         {
+            "en_US" = "Apple iPad";
+        };
+        FactoryProfiles =         {
+            555810816 =             {
+                DeviceModeDescriptions =                 {
+                    "en_US" = "\U9ed8\U8ba4";
+                };
+                DeviceProfileURL = "/System/Library/Frameworks/ICADevices.framework/Versions/A/Resources/Camera RGB Profile.icc";
+            };
+            DeviceDefaultProfileID = 555810816;
+        };
+    };
+    "Device.cmra.33373236-3339-3466-3935-383836353464" =     {
+        DeviceDescriptions =         {
+            "en_US" = "Apple iPad";
+        };
+        FactoryProfiles =         {
+            555810816 =             {
+                DeviceModeDescriptions =                 {
+                    "en_US" = "\U9ed8\U8ba4";
+                };
+                DeviceProfileURL = "/System/Library/Frameworks/ICADevices.framework/Versions/A/Resources/Camera RGB Profile.icc";
+            };
+            DeviceDefaultProfileID = 555810816;
+        };
+    };
+    "Device.cmra.36633232-6135-3338-6435-383662636630" =     {
+        DeviceDescriptions =         {
+            "en_US" = "Apple iPad";
+        };
+        FactoryProfiles =         {
+            555810816 =             {
+                DeviceModeDescriptions =                 {
+                    "en_US" = "\U9ed8\U8ba4";
+                };
+                DeviceProfileURL = "/System/Library/Frameworks/ICADevices.framework/Versions/A/Resources/Camera RGB Profile.icc";
+            };
+            DeviceDefaultProfileID = 555810816;
+        };
+    };
+    "Device.cmra.38316439-3838-6533-3632-633530393638" =     {
+        DeviceDescriptions =         {
+            "en_US" = iPad;
+        };
+        FactoryProfiles =         {
+            555810816 =             {
+                DeviceModeDescriptions =                 {
+                    "en_US" = "\U9ed8\U8ba4";
+                };
+                DeviceProfileURL = "/System/Library/Frameworks/ICADevices.framework/Versions/A/Resources/Camera RGB Profile.icc";
+            };
+            DeviceDefaultProfileID = 555810816;
+        };
+    };
+    "Device.cmra.38373131-3133-6233-3566-343362643638" =     {
+        DeviceDescriptions =         {
+            "en_US" = "Apple iPad";
+        };
+        FactoryProfiles =         {
+            555810816 =             {
+                DeviceModeDescriptions =                 {
+                    "en_US" = "\U9ed8\U8ba4";
+                };
+                DeviceProfileURL = "/System/Library/Frameworks/ICADevices.framework/Versions/A/Resources/Camera RGB Profile.icc";
+            };
+            DeviceDefaultProfileID = 555810816;
+        };
+    };
+    "Device.cmra.62303837-6135-3731-6631-326633373965" =     {
+        DeviceDescriptions =         {
+            "en_US" = "Apple iPad";
+        };
+        FactoryProfiles =         {
+            555810816 =             {
+                DeviceModeDescriptions =                 {
+                    "en_US" = "\U9ed8\U8ba4";
+                };
+                DeviceProfileURL = "/System/Library/Frameworks/ICADevices.framework/Versions/A/Resources/Camera RGB Profile.icc";
+            };
+            DeviceDefaultProfileID = 555810816;
+        };
+    };
+    "Device.cmra.62643563-3134-3532-6631-336666663735" =     {
+        DeviceDescriptions =         {
+            "en_US" = "Apple iPad";
+        };
+        FactoryProfiles =         {
+            555810816 =             {
+                DeviceModeDescriptions =                 {
+                    "en_US" = "\U9ed8\U8ba4";
+                };
+                DeviceProfileURL = "/System/Library/Frameworks/ICADevices.framework/Versions/A/Resources/Camera RGB Profile.icc";
+            };
+            DeviceDefaultProfileID = 555810816;
+        };
+    };
+    "Device.cmra.63303064-3530-6131-6234-333931393331" =     {
+        DeviceDescriptions =         {
+            "en_US" = "Apple iPad";
+        };
+        FactoryProfiles =         {
+            555810816 =             {
+                DeviceModeDescriptions =                 {
+                    "en_US" = "\U9ed8\U8ba4";
+                };
+                DeviceProfileURL = "/System/Library/Frameworks/ICADevices.framework/Versions/A/Resources/Camera RGB Profile.icc";
+            };
+            DeviceDefaultProfileID = 555810816;
+        };
+    };
+    "Device.cmra.63363437-3330-3464-3738-653038623964" =     {
+        DeviceDescriptions =         {
+            "en_US" = "Apple iPhone";
+        };
+        FactoryProfiles =         {
+            555810816 =             {
+                DeviceModeDescriptions =                 {
+                    "en_US" = "\U9ed8\U8ba4";
+                };
+                DeviceProfileURL = "/System/Library/Frameworks/ICADevices.framework/Versions/A/Resources/Camera RGB Profile.icc";
+            };
+            DeviceDefaultProfileID = 555810816;
+        };
+    };
+}, "METAL_ERROR_MODE": 0, "NSPreferredWebServices": {
+    NSWebServicesProviderWebSearch =     {
+        NSDefaultDisplayName = Baidu;
+        NSProviderIdentifier = "com.baidu.www";
+    };
+}, "NSButtonDelay": 0.4, "NSDragCancelLimit": 100000.0, "METAL_ERROR_CHECK_EXTENDED_MODE": 4, "com.apple.trackpad.twoFingerFromRightEdgeSwipeGesture": 3, "NSFixedPitchFontSize": 11, "NSNavPanelSidebarKeyForOpen": <__NSCFArray 0x6000000413e0>(
+
+)
+, "com.apple.trackpad.scrollBehavior": 2, "com.apple.trackpad.pinchGesture": 1, "NSMenuScrollingSpeed": 5, "NavPanelFileListModeForOpenMode": 1, "AppleLanguages": <__NSCFArray 0x600000067180>(
+zh-Hans,
+en
+)
+, "com.apple.trackpad.threeFingerVertSwipeGesture": 2, "NSAutomaticSpellingCorrectionEnabled": 1, "NSScrollerKnobDelay": 0.001, "AppleLocale": zh_CN, "NSNavPanelFileLastListModeForOpenModeKey": 1, "com.apple.mouse.tapBehavior": 1, "NSInterfaceStyle": macintosh, "NSAutomaticDashSubstitutionEnabled": 1, "NSPreferredSpellServerVendors": {
+    English = "NeXT-OpenStep";
+}, "com.apple.trackpad.momentumScroll": 1, "com.apple.TimeZonePref.Last_Selected_City": <__NSCFArray 0x6000000e0900>(
+39.92889,
+116.3883,
+0,
+Asia/Shanghai,
+CN,
+Beijing,
+China,
+Beijing,
+China,
+DEPRECATED IN 10.6
+)
+, "NSMenuFlashCount": 3, "NSMargins": 72 72 90 90, "NSNavPanelSidebarKeyForSave": <__NSCFArray 0x600000041350>(
+
+)
+, "NavPanelFileListModeForSaveMode": 1, "com.apple.trackpad.fourFingerHorizSwipeGesture": 2, "NSInputServerLaunchTimeout": 60, "NSDragAutoscrollAreaWidth": 5.0, "com.apple.trackpad.fiveFingerPinchSwipeGesture": 2, "NSScrollAnimationEnabled": YES, "NSFixedPitchFont": Menlo-Regular, "com.apple.trackpad.version": 5, "NSNavRecentPlaces": <__NSCFArray 0x6000000a0c00>(
+~/Desktop,
+~/Desktop/MacLogAnalyze/MacLogAnalyze,
+~/Desktop/KidForIPad/KidForMac,
+~/Desktop/KidForIPad/KidForMac/controls,
+~/Desktop/KidForIPad/KidForIPad
+)
+, "NSDocumentRevisionsDebugMode": YES, "NSUIHeartBeatCycle": 0.03, "com.apple.trackpad.rotateGesture": 1, "NSDraggingAutoscrollDelay": 0.4, "AppleAntiAliasingThreshold": 4, "METAL_DEBUG_ERROR_MODE": 4, "NSNavPanelFileListModeForOpenMode2": 1, "Country": CN, "AppleShowAllExtensions": 1, "NSUseCocoaInputServers": YES, "METAL_WARNING_MODE": 4, "NSPersonNameDefaultShouldPreferNicknamesPreference": 0, "com.apple.trackpad.enableSecondaryClick": 1, "NSMenuScrollingOffset": 3, "AppleTextDirection": 0, "NSPersonNameDefaultDisplayNameOrder": 0, "NSFont": Helvetica, "NSScrollerHasSeparateArrows": YES, "NSNavPanelFileLastListModeForSaveModeKey": 1, "NSUserDictionaryReplacementItems": <__NSCFArray 0x600000067140>(
+{
+    on = 1;
+    replace = msd;
+    with = "\U9a6c\U4e0a\U5230\Uff01";
+}
+)
+, "com.apple.trackpad.fourFingerVertSwipeGesture": 2, "NSNavPanelFileListModeForSaveMode2": 1, "NSSystemFont": .SFNSText-Regular, "AppleActionOnDoubleClick": Maximize, "com.apple.trackpad.threeFingerTapGesture": 0, "NSResetIncrementalSearchOnFailure": YES, "NSScrollerButtonPeriod": 0.05, "NSLanguages": <__NSArrayI 0x608000020b40>(
+zh-Hans,
+en
+)
+, "com.apple.trackpad.threeFingerHorizSwipeGesture": 2, "AKDeviceUnlockState": 0, "NSAutomaticQuoteSubstitutionEnabled": 1, "NSWindowResizeTime": .20, "AppleGCIdleTimeInterval": 1.0, "NSBoldSystemFont": .SFNSText-Bold, "NSPersonNameDefaultShortNameFormat": 0, "NSScrollerButtonDelay": 0.5]
+2017-01-03 19:45:28.789 MacLogAnalyze[73911:4620607] 收到一条本地通知
