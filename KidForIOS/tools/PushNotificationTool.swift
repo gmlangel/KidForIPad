@@ -9,6 +9,16 @@
 import Foundation
 import UserNotifications
 class PushNotificationTool: NSObject,UNUserNotificationCenterDelegate {
+
+    static var instance:PushNotificationTool{
+        get{
+
+            struct PushNotificationToolStruc{
+                static var _ins:PushNotificationTool = PushNotificationTool();
+            }
+            return PushNotificationToolStruc._ins;
+        }
+    }
     
     /**
      初始化推送通知工具
