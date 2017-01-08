@@ -27,24 +27,24 @@ class PushNotificationTool_Mac: NSObject,NSUserNotificationCenterDelegate {
      */
     func ginit(){
         //获得通知中心
-        let center = NSUserNotificationCenter.defaultUserNotificationCenter();
+        let center = NSUserNotificationCenter.default;
         //设置通知中心的代理
         center.delegate = self;
         //注册device push token
-        let remoteType = NSRemoteNotificationType.Badge.rawValue | NSRemoteNotificationType.Alert.rawValue | NSRemoteNotificationType.Sound.rawValue;
+        let remoteType = NSRemoteNotificationType.badge.rawValue | NSRemoteNotificationType.alert.rawValue | NSRemoteNotificationType.sound.rawValue;
         //注册推送类型
-        NSApplication.sharedApplication().registerForRemoteNotificationTypes(NSRemoteNotificationType(rawValue: remoteType));
+        NSApplication.shared().registerForRemoteNotifications(matching: NSRemoteNotificationType(rawValue: remoteType));
     }
     
     /**
      检测是否由一个usernotification调起了应用。
      @param appDidFinishNotifycation 是一个app启动完毕时的系统级通知，从中可以判断出当前的app是否是由一个推送而启动的，并做响应处理
      */
-    func checkIsOpenByUserNotification(appDidFinishNotifycation:NSNotification?)
+    func checkIsOpenByUserNotification(appDidFinishNotifycation:Notification?)
     {
         //解析notify，判断app是否是由一个推送通知调起的。
         if let userNotify = appDidFinishNotifycation?.userInfo?[NSApplicationLaunchUserNotificationKey]{
-            NSNotificationCenter.defaultCenter().postNotificationName(UserNotificationOpenNotificationKey, object: userNotify);
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: UserNotificationOpenNotificationKey), object: userNotify);
         }
     }
     
@@ -71,9 +71,9 @@ class PushNotificationTool_Mac: NSObject,NSUserNotificationCenterDelegate {
         localNotify.userInfo = ["localNotifyKey":notifyEntity.localNotifyKey,"awaysShow":notifyEntity.awaysShow];
         localNotify.identifier = notifyEntity.id;
         //设置通知的延后显示时间
-        localNotify.deliveryDate = NSDate(timeIntervalSinceNow: notifyEntity.delay);
+        localNotify.deliveryDate = Date(timeIntervalSinceNow: notifyEntity.delay);
         //设置通知发生的时区  默认为用户所在的时区
-        localNotify.deliveryTimeZone = NSTimeZone.defaultTimeZone();
+        localNotify.deliveryTimeZone = NSTimeZone.default;
         //设置通知的声音
         localNotify.soundName = NSUserNotificationDefaultSoundName;
         //NSLog(localNotify.soundName!);
@@ -86,23 +86,23 @@ class PushNotificationTool_Mac: NSObject,NSUserNotificationCenterDelegate {
      移除一个notifaction不论是否处理过它
      */
     func cancelNotifactionById(notifyId:String){
-        var arr = NSUserNotificationCenter.defaultUserNotificationCenter().scheduledNotifications;
+        var arr = NSUserNotificationCenter.default.scheduledNotifications;
         for noti in arr{
             if let id = noti.identifier{
                 if id == notifyId{
-                    NSUserNotificationCenter.defaultUserNotificationCenter().removeScheduledNotification(noti);
+                    NSUserNotificationCenter.default.removeScheduledNotification(noti);
                     break;
                 }
             }
         }
         
         
-        arr += NSUserNotificationCenter.defaultUserNotificationCenter().deliveredNotifications;
+        arr += NSUserNotificationCenter.default.deliveredNotifications;
         
         for not in arr{
             if let id = not.identifier{
                 if id == notifyId{
-                NSUserNotificationCenter.defaultUserNotificationCenter().removeDeliveredNotification(not);
+                NSUserNotificationCenter.default.removeDeliveredNotification(not);
                     break;
                 }
             }
@@ -112,24 +112,24 @@ class PushNotificationTool_Mac: NSObject,NSUserNotificationCenterDelegate {
     
     
     //MARK:NSUserNotificationCenterDelegate的实现
-    func userNotificationCenter(center: NSUserNotificationCenter, didDeliverNotification notification: NSUserNotification) {
+    func userNotificationCenter(_ center: NSUserNotificationCenter, didDeliver notification: NSUserNotification){
         notifyCount += 1;
-        NSApplication.sharedApplication().dockTile.badgeLabel = "\(notifyCount)";//显示app图标右上角的计数
-        if notification.remote == true{
+        NSApplication.shared().dockTile.badgeLabel = "\(notifyCount)";//显示app图标右上角的计数
+        if notification.isRemote == true{
             NSLog("收到一条远程通知");
         }else{
             NSLog("收到一条本地通知");
         }
     }
     
-    func userNotificationCenter(center: NSUserNotificationCenter, didActivateNotification notification: NSUserNotification) {
+    func userNotificationCenter(_ center: NSUserNotificationCenter, didActivate notification: NSUserNotification) {
         //收到一个推送通知，下面是处理代码
         NSLog("用户点击了通知面板，执行对应的处理");
         switch notification.activationType{
-        case NSUserNotificationActivationType.ActionButtonClicked:NSLog("点击了通知的默认按钮");break;
-        case NSUserNotificationActivationType.AdditionalActionClicked:NSLog("点击了通知的用户自定义按钮");break;
-        case NSUserNotificationActivationType.ContentsClicked:NSLog("点击了通知的内容面板");break;
-        case NSUserNotificationActivationType.Replied:NSLog("点击了回复按钮");break;
+        case NSUserNotification.ActivationType.actionButtonClicked:NSLog("点击了通知的默认按钮");break;
+        case NSUserNotification.ActivationType.additionalActionClicked:NSLog("点击了通知的用户自定义按钮");break;
+        case NSUserNotification.ActivationType.contentsClicked:NSLog("点击了通知的内容面板");break;
+        case NSUserNotification.ActivationType.replied:NSLog("点击了回复按钮");break;
         default:NSLog("用户什么都没点击");break;
         }
         if let uInfo = notification.userInfo{
@@ -137,14 +137,14 @@ class PushNotificationTool_Mac: NSObject,NSUserNotificationCenterDelegate {
         }
         
         if let id = notification.identifier{
-            self.cancelNotifactionById(id);
+            self.cancelNotifactionById(notifyId: id);
         }
         //还原app图标右上角的计数
         notifyCount = 0;
-        NSApplication.sharedApplication().dockTile.badgeLabel = nil;
+        NSApplication.shared().dockTile.badgeLabel = nil;
     }
     
-    func userNotificationCenter(center: NSUserNotificationCenter, shouldPresentNotification notification: NSUserNotification) -> Bool {
+    func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
         //如果return为true则app无论出于激活还是没激活，关闭状态都会提示通知。  如果设置为false则只有app处于未激活，关闭状态时才提示
         var b = false;
         if let uInfo = notification.userInfo{
@@ -189,7 +189,7 @@ class PNLocalEntity: NSObject {
     /**
      推送的延迟时间
      */
-    var delay:NSTimeInterval = 0;
+    var delay:TimeInterval = 0;
     
     /**
      推送通知的唯一key

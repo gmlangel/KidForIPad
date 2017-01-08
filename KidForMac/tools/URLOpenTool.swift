@@ -30,34 +30,34 @@ class URLOpenTool:GMLProxy{
     /**
      当被URL调起时
      */
-    func onByURLOpen(event:NSAppleEventDescriptor,replyEvent:NSAppleEventDescriptor){
+    @objc func onByURLOpen(event:NSAppleEventDescriptor,replyEvent:NSAppleEventDescriptor){
         let sourceData = event.data;
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) {
+        DispatchQueue.global().async {
             //解析数据
             var args:[String] = [String]();
-            let j = sourceData.length;
-            var resultdata = NSMutableData();
-            var ran = NSRange(location: 0, length: 1);
-            var d = 0;
+            let j = sourceData.count;
+            let resultdata = NSMutableData();
+            let byte:UnsafeMutablePointer<UInt8> = UnsafeMutablePointer<UInt8>.allocate(capacity: 1);
             for i:Int in 0 ..< j{
-                ran.location = i;
-                sourceData.getBytes(&d, range: ran);
-                if(d != 0)
+                let ran = Range(uncheckedBounds: (lower: i, upper: i + 1));
+                sourceData.copyBytes(to: byte, from: ran);
+                if(UInt8(byte[0]) != 0)
                 {
-                    resultdata.appendBytes(&d, length: 1);
+                    resultdata.append(byte, length: 1);
                 }
             }
-            let str = String(data: resultdata,encoding: NSASCIIStringEncoding)
-            if(str != nil && str!.containsString("://") && str!.containsString("justend"))
+            let str = String(data: resultdata as Data,encoding: String.Encoding.ascii)
+            if(str != nil && str!.contains("://") && str!.contains("justend"))
             {
                 //可以解析出参数来
-                var tempnsstring = NSString(string: str!);
-                var argrange = tempnsstring.rangeOfString("://");
-                var argStr = tempnsstring.substringWithRange(NSRange(location: argrange.location + argrange.length, length: tempnsstring.rangeOfString("justend").location - argrange.location - argrange.length))
-                args = argStr.componentsSeparatedByString("&");
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.execURLArgs(args)
-                })
+                let tempnsstring = NSString(string: str!);
+                let argrange = tempnsstring.range(of: "://");
+                let argStr = tempnsstring.substring(with: NSRange(location: argrange.location + argrange.length, length: tempnsstring.range(of: "justend").location - argrange.location - argrange.length))
+                args = argStr.components(separatedBy: "&");
+                
+                DispatchQueue.global().async {
+                    self.execURLArgs(args: args)
+                }
             }
         }
     }
@@ -69,16 +69,16 @@ class URLOpenTool:GMLProxy{
     {
         if(args.count > 0)
         {
-            GPrinter.print("被URL调起，有参数");
+            Swift.print("被URL调起，有参数");
             let j = args.count;
             for i:Int in 0 ..< j{
                 let str = NSString(string:args[i]);
-                if(str.containsString("="))
+                if(str.contains("="))
                 {
-                    let runag = str.rangeOfString("=");
-                    let key = str.substringToIndex(runag.location);
-                    let value = str.substringFromIndex(runag.location + 1);
-                    urlData[key] = value;
+                    let runag = str.range(of: "=");
+                    let key = str.substring(to: runag.location);
+                    let value = str.substring(from: runag.location + 1);
+                    urlData[key] = value as AnyObject?;
                 }else{
                     continue;
                 }
@@ -123,18 +123,18 @@ class URLOpenTool:GMLProxy{
     }
     
     func decodeLoginAuth(base64Str:String)->String?{
-        var tempstr = NSString(string: base64Str);
+        let tempstr = NSString(string: base64Str);
         let j = tempstr.length;
         var tttt = "";
         for i:Int in 0 ..< j{
-            tttt = tempstr.substringWithRange(NSRange(location: i, length: 1)) + tttt;
+            tttt = tempstr.substring(with: NSRange(location: i, length: 1)) + tttt;
         }
-        let data = NSData(base64EncodedString: tttt, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters);
+        let data = NSData(base64Encoded: tttt, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters);
         if(data == nil)
         {
             return nil;
         }
-        return String(data:data!,encoding:NSUTF8StringEncoding);
+        return String(data:data! as Data,encoding:String.Encoding.utf8);
     }
     
 }

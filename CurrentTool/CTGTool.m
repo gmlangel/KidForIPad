@@ -9,7 +9,6 @@
 #import "CTGTool.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonHMAC.h>
-
 @implementation CTGTool
 
 +(CGFloat)grandom:(uint32_t)arg1 arg2:(uint32_t)_arg2

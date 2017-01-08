@@ -10,4 +10,5 @@
 #define KidForIOSHeader_h
 
 #import <UIKit/UIKit.h>
+#import "GMLKit.h"
 #endif /* KidForIOSHeader_h */

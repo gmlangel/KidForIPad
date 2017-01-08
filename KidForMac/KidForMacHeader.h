@@ -10,4 +10,5 @@
 #define KidForMacHeader_h
 
 #import <AppKit/AppKit.h>
+#import "GMLKit.h"
 #endif /* KidForMacHeader_h */

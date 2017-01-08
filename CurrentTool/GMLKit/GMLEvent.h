@@ -7,12 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+#elif (TARGET_OS_MAC && !TARGET_OS_SIMULATOR)
 #import <AppKit/AppKit.h>
+#elif(TARGET_OS_IOS || (TARGET_OS_MAC && TARGET_OS_SIMULATOR))
+#import <UIKit/UIKit.h>
+#endif
 @interface GMLEvent : NSObject
 {
     NSString * _eventType;
     id _data;
-    NSResponder * _target;
+    NSObject * _target;
 }
 /**
  事件类型
@@ -27,10 +33,10 @@
 /**
  事件的发起者
  */
-@property (readonly) NSResponder * __nullable target;
+@property (readonly) NSObject * __nullable target;
 
 
--(instancetype __nonnull)initWithEventType:(NSString * __nonnull)_eventType target:(NSResponder * __nullable)_tg data:(id __nullable) _da;
+-(instancetype __nonnull)initWithEventType:(NSString * __nonnull)_eventType target:(NSObject * __nullable)_tg data:(id __nullable) _da;
 @end
 
 

@@ -6,19 +6,17 @@
 //  Copyright (c) 2015年 guominglong. All rights reserved.
 //
 
-import Cocoa
+import Foundation
 
 public class CTHeartbeatManager: NSObject {
     
     public var taskArr:NSMutableDictionary;
     public class var instance:CTHeartbeatManager{
         get{
-            if(InstanceManager.instance().getModuleInstaceByName("CTHeartbeatManager") == nil)
-            {
-                let ins:CTHeartbeatManager = CTHeartbeatManager();
-                InstanceManager.instance().addModuleInstance(ins, nameKey: "CTHeartbeatManager");
+            struct CTHeartbeatManagerStruct{
+                static var _ins = CTHeartbeatManager();
             }
-            return InstanceManager.instance().getModuleInstaceByName("CTHeartbeatManager") as! CTHeartbeatManager;
+            return CTHeartbeatManagerStruct._ins;
         }
     }
     
@@ -29,7 +27,7 @@ public class CTHeartbeatManager: NSObject {
     
     public func hasTask(taskName:String)->Bool
     {
-        return taskArr.valueForKey(taskName) != nil;
+        return taskArr.value(forKey: taskName) != nil;
     }
     
     /**
@@ -40,10 +38,10 @@ public class CTHeartbeatManager: NSObject {
     taskName 绑定名称
     repeats 是否循环执行
     */
-    public func addTask(sel:Selector,ti:NSTimeInterval,tg:AnyObject,taskName:String,repeats:Bool = true)
+    public func addTask(sel:Selector,ti:TimeInterval,tg:AnyObject,taskName:String,repeats:Bool = true)
     {
-        let nt:NSTimer = NSTimer.scheduledTimerWithTimeInterval(ti, target: tg, selector: sel, userInfo: nil, repeats: repeats);
-        taskArr.setObject(nt, forKey: taskName);
+        let nt:Timer = Timer.scheduledTimer(timeInterval: ti, target: tg, selector: sel, userInfo: nil, repeats: repeats);
+        taskArr.setObject(nt, forKey: taskName as NSCopying);
     }
     
     /**
@@ -51,13 +49,13 @@ public class CTHeartbeatManager: NSObject {
     */
     public func removeTask(taskName:String)
     {
-        if(hasTask(taskName) == false)
+        if(hasTask(taskName: taskName) == false)
         {
             return;
         }
-        let nt:NSTimer = taskArr.objectForKey(taskName)as! NSTimer;
+        let nt:Timer = taskArr.object(forKey: taskName)as! Timer;
         nt.invalidate();
-        taskArr.removeObjectForKey(taskName);
+        taskArr.removeObject(forKey: taskName);
     }
     
     /**
@@ -66,13 +64,13 @@ public class CTHeartbeatManager: NSObject {
     public func removeAllTask()
     {
         var arr:Array = taskArr.allKeys;
-        var nt:NSTimer;
+        var nt:Timer;
         let j = arr.count
         for i:Int in 0 ..< j
         {
-            nt = taskArr.objectForKey(arr[i]) as! NSTimer;
+            nt = taskArr.object(forKey: arr[i]) as! Timer;
             nt.invalidate();
-            taskArr.removeObjectForKey(arr[i]);
+            taskArr.removeObject(forKey: arr[i]);
         }
     }
     

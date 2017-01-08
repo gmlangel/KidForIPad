@@ -16,7 +16,7 @@
 #include <ifaddrs.h>
 #import <dlfcn.h>
 #import <SystemConfiguration/SystemConfiguration.h>
-
+#import <CoreGraphics/CoreGraphics.h>
 #pragma mark MAC addy
 
 static NSString * deviceString;

@@ -30,7 +30,7 @@ class TranslateEntity:NSObject{
     var type:TranslateType!;
 }
 
-class CTYouDaoTranslateTool:GMLProxy {
+class CTYouDaoTranslateTool:NSObject {
     
     private var urlstr:String!;
     private var completeFunc:((TranslateEntity)->Void)?;//完成请求后的回调
@@ -45,7 +45,7 @@ class CTYouDaoTranslateTool:GMLProxy {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func translateStr(str:String,_completeFunc:((TranslateEntity)->Void))
+    func translateStr(str:String,_completeFunc:@escaping ((TranslateEntity)->Void))
     {
         if(isTranslating)
         {
@@ -53,29 +53,29 @@ class CTYouDaoTranslateTool:GMLProxy {
         }
         isTranslating = true;
         completeFunc = _completeFunc;
-        let url = NSURL(string: String(format: urlstr, str).stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!);
-        let uq = NSMutableURLRequest(URL: url!);
-        uq.HTTPMethod = "POST";
-        NSURLConnection.sendAsynchronousRequest(uq, queue: NSOperationQueue.mainQueue(), completionHandler: onfanyiCallBack);
+        let url = URL(string: String(format: urlstr, str).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlPathAllowed)!);
+        let uq = NSMutableURLRequest(url: url!);
+        uq.httpMethod = "POST";
+        NSURLConnection.sendAsynchronousRequest(uq as URLRequest, queue: OperationQueue.main, completionHandler: onfanyiCallBack);
     }
     
-    private func onfanyiCallBack(urlresp:NSURLResponse?,nd:NSData?,ne:NSError?) ->Void
+    private func onfanyiCallBack(urlresp:URLResponse?,nd:Data?,ne:Error?) ->Void
     {
         //解析JSON。
         if(ne == nil)
         {
             if(nd == nil)
             {
-                showError("translateAbout_1");
+                showError(str: "translateAbout_1");
                 return;
             }
             
             do{
-                let resultData:NSDictionary = try NSJSONSerialization.JSONObjectWithData(nd!, options: NSJSONReadingOptions.MutableLeaves) as! NSDictionary;
+                let resultData:NSDictionary = try JSONSerialization.jsonObject(with: nd!, options: JSONSerialization.ReadingOptions.mutableLeaves) as! NSDictionary;
                 
-                fenxiJSON(resultData);
+                fenxiJSON(dic: resultData);
             }catch{
-                showError("translateAbout_1");
+                showError(str: "translateAbout_1");
             }
             
         }else{
@@ -85,26 +85,26 @@ class CTYouDaoTranslateTool:GMLProxy {
     
     private func fenxiJSON(dic:NSDictionary)
     {
-        let resultCode:Int = dic.valueForKey("errorCode") as! Int;
+        let resultCode:Int = dic.value(forKey: "errorCode") as! Int;
         switch(resultCode)
         {
         case 0:
-            checkType(dic);
+            checkType(dic: dic);
             break;
         case 20:
-            showError("translateAbout_0");
+            showError(str: "translateAbout_0");
             break;
         case 30:
-            showError("translateAbout_1");
+            showError(str: "translateAbout_1");
             break;
         case 40:
-            showError("translateAbout_2");
+            showError(str: "translateAbout_2");
             break;
         case 50:
-            showError("translateAbout_3");
+            showError(str: "translateAbout_3");
             break;
         case 60:
-            showError("translateAbout_1");
+            showError(str: "translateAbout_1");
             break;
         default:
             isTranslating = false;
@@ -118,7 +118,7 @@ class CTYouDaoTranslateTool:GMLProxy {
         
         let enti = TranslateEntity()
         enti.type = .TranslateErr;
-        enti.beforeText = NSMutableAttributedString(string: LanguageManager.instance().getLanguageStr(str));
+        enti.beforeText = NSMutableAttributedString(string:str);
         enti.afterText = NSMutableAttributedString(string: "");
         completeFunc!(enti);
         completeFunc = nil;
@@ -145,7 +145,7 @@ class CTYouDaoTranslateTool:GMLProxy {
                 enti.beforeText = NSMutableAttributedString(string: dataBase["query"] as! String);
                 if(data.keys.contains("phonetic"))
                 {
-                    enti.beforeText.appendAttributedString(NSAttributedString(string: "\t[\(data["phonetic"] as! String)]"));
+                    enti.beforeText.append(NSAttributedString(string: "\t[\(data["phonetic"] as! String)]"));
                 }
             }
             
@@ -156,12 +156,12 @@ class CTYouDaoTranslateTool:GMLProxy {
                 let j = arr.count
                 for i:Int in 0 ..< j
                 {
-                    enti.afterText.appendAttributedString(NSAttributedString(string: arr[i] + "\n"));
+                    enti.afterText.append(NSAttributedString(string: arr[i] + "\n"));
                 }
-                enti.afterText.deleteCharactersInRange(NSRange(location: enti.afterText.length - 1, length: 1));
+                enti.afterText.deleteCharacters(in: NSRange(location: enti.afterText.length - 1, length: 1));
             }else
             {
-                enti.afterText.appendAttributedString(NSAttributedString(string: (data["translation"] as! String)));
+                enti.afterText.append(NSAttributedString(string: (data["translation"] as! String)));
             }
             //enti.afterText.appendAttributedString(weizhui);
         }else

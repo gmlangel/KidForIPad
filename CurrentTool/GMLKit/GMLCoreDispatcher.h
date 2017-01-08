@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+#elif (TARGET_OS_MAC && !TARGET_OS_SIMULATOR)
 #import <AppKit/AppKit.h>
+#elif(TARGET_OS_IOS || (TARGET_OS_MAC && TARGET_OS_SIMULATOR))
+#import <UIKit/UIKit.h>
+#endif
 @class GMLEvent;
 @interface GMLCoreDispatcher : NSObject
 {

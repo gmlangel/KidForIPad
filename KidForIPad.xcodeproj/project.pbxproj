@@ -28,6 +28,26 @@
 		4EEEA9901E165FAB0098CA01 /* AssetsExportDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA98F1E165FAB0098CA01 /* AssetsExportDemoViewController.swift */; };
 		4EEEA99A1E166BFB0098CA01 /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA9991E166BFB0098CA01 /* DropView.swift */; };
 		4EEEA99C1E1674260098CA01 /* Tishi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEA99B1E1674260098CA01 /* Tishi.swift */; };
+		4EF3B7561E221112009E5D9A /* CTAESTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7511E221112009E5D9A /* CTAESTool.m */; };
+		4EF3B7581E221112009E5D9A /* CTHeartbeatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7541E221112009E5D9A /* CTHeartbeatManager.swift */; };
+		4EF3B7591E221112009E5D9A /* CTYouDaoTranslateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7551E221112009E5D9A /* CTYouDaoTranslateTool.swift */; };
+		4EF3B7671E221122009E5D9A /* GMLCoreDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B75C1E221122009E5D9A /* GMLCoreDispatcher.m */; };
+		4EF3B7681E221122009E5D9A /* GMLCoreDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B75C1E221122009E5D9A /* GMLCoreDispatcher.m */; };
+		4EF3B7691E221122009E5D9A /* GMLEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B75E1E221122009E5D9A /* GMLEvent.m */; };
+		4EF3B76A1E221122009E5D9A /* GMLEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B75E1E221122009E5D9A /* GMLEvent.m */; };
+		4EF3B76B1E221122009E5D9A /* GMLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7601E221122009E5D9A /* GMLExtension.m */; };
+		4EF3B76C1E221122009E5D9A /* GMLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7601E221122009E5D9A /* GMLExtension.m */; };
+		4EF3B76D1E221122009E5D9A /* GMLProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7631E221122009E5D9A /* GMLProxy.m */; };
+		4EF3B76E1E221122009E5D9A /* GMLProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7631E221122009E5D9A /* GMLProxy.m */; };
+		4EF3B76F1E221122009E5D9A /* GMLProxyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7651E221122009E5D9A /* GMLProxyFactory.m */; };
+		4EF3B7701E221122009E5D9A /* GMLProxyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7651E221122009E5D9A /* GMLProxyFactory.m */; };
+		4EF3B7711E22112A009E5D9A /* CTAESTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7511E221112009E5D9A /* CTAESTool.m */; };
+		4EF3B7731E221131009E5D9A /* CTHeartbeatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7541E221112009E5D9A /* CTHeartbeatManager.swift */; };
+		4EF3B7741E221136009E5D9A /* CTYouDaoTranslateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7551E221112009E5D9A /* CTYouDaoTranslateTool.swift */; };
+		4EF3B7761E22216E009E5D9A /* PushNotificationToolDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7751E22216E009E5D9A /* PushNotificationToolDemo.swift */; };
+		4EF3B77A1E222179009E5D9A /* CrashCheckTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7771E222179009E5D9A /* CrashCheckTool.swift */; };
+		4EF3B77B1E222179009E5D9A /* PushNotificationTool_Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7781E222179009E5D9A /* PushNotificationTool_Mac.swift */; };
+		4EF3B77C1E222179009E5D9A /* URLOpenTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3B7791E222179009E5D9A /* URLOpenTool.swift */; };
 		4EF780861E18B2B50047EAD1 /* CustomAssets in Resources */ = {isa = PBXBuildFile; fileRef = 4EEEA97D1E16350D0098CA01 /* CustomAssets */; };
 		4EF780881E18B3160047EAD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF780871E18B3160047EAD1 /* Assets.xcassets */; };
 		4EF7808D1E18BEDC0047EAD1 /* CTResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF7808C1E18BEDC0047EAD1 /* CTResourceManager.swift */; };
@@ -59,6 +79,26 @@
 		4EEEA9961E1662C00098CA01 /* KidForMacHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KidForMacHeader.h; sourceTree = "<group>"; };
 		4EEEA9991E166BFB0098CA01 /* DropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
 		4EEEA99B1E1674260098CA01 /* Tishi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tishi.swift; sourceTree = "<group>"; };
+		4EF3B7501E221112009E5D9A /* CTAESTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAESTool.h; sourceTree = "<group>"; };
+		4EF3B7511E221112009E5D9A /* CTAESTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAESTool.m; sourceTree = "<group>"; };
+		4EF3B7541E221112009E5D9A /* CTHeartbeatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTHeartbeatManager.swift; sourceTree = "<group>"; };
+		4EF3B7551E221112009E5D9A /* CTYouDaoTranslateTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTYouDaoTranslateTool.swift; sourceTree = "<group>"; };
+		4EF3B75B1E221122009E5D9A /* GMLCoreDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLCoreDispatcher.h; sourceTree = "<group>"; };
+		4EF3B75C1E221122009E5D9A /* GMLCoreDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLCoreDispatcher.m; sourceTree = "<group>"; };
+		4EF3B75D1E221122009E5D9A /* GMLEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLEvent.h; sourceTree = "<group>"; };
+		4EF3B75E1E221122009E5D9A /* GMLEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLEvent.m; sourceTree = "<group>"; };
+		4EF3B75F1E221122009E5D9A /* GMLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLExtension.h; sourceTree = "<group>"; };
+		4EF3B7601E221122009E5D9A /* GMLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLExtension.m; sourceTree = "<group>"; };
+		4EF3B7611E221122009E5D9A /* GMLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLKit.h; sourceTree = "<group>"; };
+		4EF3B7621E221122009E5D9A /* GMLProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLProxy.h; sourceTree = "<group>"; };
+		4EF3B7631E221122009E5D9A /* GMLProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLProxy.m; sourceTree = "<group>"; };
+		4EF3B7641E221122009E5D9A /* GMLProxyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLProxyFactory.h; sourceTree = "<group>"; };
+		4EF3B7651E221122009E5D9A /* GMLProxyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLProxyFactory.m; sourceTree = "<group>"; };
+		4EF3B7661E221122009E5D9A /* GMLViewProtocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLViewProtocal.h; sourceTree = "<group>"; };
+		4EF3B7751E22216E009E5D9A /* PushNotificationToolDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationToolDemo.swift; sourceTree = "<group>"; };
+		4EF3B7771E222179009E5D9A /* CrashCheckTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrashCheckTool.swift; sourceTree = "<group>"; };
+		4EF3B7781E222179009E5D9A /* PushNotificationTool_Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationTool_Mac.swift; sourceTree = "<group>"; };
+		4EF3B7791E222179009E5D9A /* URLOpenTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpenTool.swift; sourceTree = "<group>"; };
 		4EF780871E18B3160047EAD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EF7808C1E18BEDC0047EAD1 /* CTResourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTResourceManager.swift; sourceTree = "<group>"; };
 		56D16CA60A1B3A9E10A7A0F8 /* Pods-KidForIPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidForIPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KidForIPad/Pods-KidForIPad.debug.xcconfig"; sourceTree = "<group>"; };
@@ -177,9 +217,14 @@
 		4EEEA9791E1604E50098CA01 /* CurrentTool */ = {
 			isa = PBXGroup;
 			children = (
+				4EF3B7501E221112009E5D9A /* CTAESTool.h */,
+				4EF3B7511E221112009E5D9A /* CTAESTool.m */,
+				4EF3B7541E221112009E5D9A /* CTHeartbeatManager.swift */,
+				4EF3B7551E221112009E5D9A /* CTYouDaoTranslateTool.swift */,
 				4EEEA97A1E1605660098CA01 /* CTLoader.swift */,
 				4EEEA9821E163DB10098CA01 /* CTErrorEnum.swift */,
 				4EF7808C1E18BEDC0047EAD1 /* CTResourceManager.swift */,
+				4EF3B75A1E221122009E5D9A /* GMLKit */,
 			);
 			path = CurrentTool;
 			sourceTree = "<group>";
@@ -187,6 +232,9 @@
 		4EEEA97F1E1636650098CA01 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				4EF3B7771E222179009E5D9A /* CrashCheckTool.swift */,
+				4EF3B7781E222179009E5D9A /* PushNotificationTool_Mac.swift */,
+				4EF3B7791E222179009E5D9A /* URLOpenTool.swift */,
 				4EEEA9801E1636E60098CA01 /* AssetsExportTool.swift */,
 			);
 			path = tools;
@@ -195,6 +243,7 @@
 		4EEEA98E1E165FAB0098CA01 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				4EF3B7751E22216E009E5D9A /* PushNotificationToolDemo.swift */,
 				4EEEA98F1E165FAB0098CA01 /* AssetsExportDemoViewController.swift */,
 			);
 			path = demo;
@@ -206,6 +255,25 @@
 				4EEEA9991E166BFB0098CA01 /* DropView.swift */,
 			);
 			path = controls;
+			sourceTree = "<group>";
+		};
+		4EF3B75A1E221122009E5D9A /* GMLKit */ = {
+			isa = PBXGroup;
+			children = (
+				4EF3B75B1E221122009E5D9A /* GMLCoreDispatcher.h */,
+				4EF3B75C1E221122009E5D9A /* GMLCoreDispatcher.m */,
+				4EF3B75D1E221122009E5D9A /* GMLEvent.h */,
+				4EF3B75E1E221122009E5D9A /* GMLEvent.m */,
+				4EF3B75F1E221122009E5D9A /* GMLExtension.h */,
+				4EF3B7601E221122009E5D9A /* GMLExtension.m */,
+				4EF3B7611E221122009E5D9A /* GMLKit.h */,
+				4EF3B7621E221122009E5D9A /* GMLProxy.h */,
+				4EF3B7631E221122009E5D9A /* GMLProxy.m */,
+				4EF3B7641E221122009E5D9A /* GMLProxyFactory.h */,
+				4EF3B7651E221122009E5D9A /* GMLProxyFactory.m */,
+				4EF3B7661E221122009E5D9A /* GMLViewProtocal.h */,
+			);
+			path = GMLKit;
 			sourceTree = "<group>";
 		};
 		7EEE90177D3EEEDC0EF58E84 /* Pods */ = {
@@ -327,8 +395,16 @@
 				4E7EBF7F1E1A45CB001A57D0 /* ViewController.swift in Sources */,
 				4E7EBF921E1A45FA001A57D0 /* PushNotificationTool.swift in Sources */,
 				4E7EBF961E1A466E001A57D0 /* CTLoader.swift in Sources */,
+				4EF3B76C1E221122009E5D9A /* GMLExtension.m in Sources */,
+				4EF3B76E1E221122009E5D9A /* GMLProxy.m in Sources */,
+				4EF3B7701E221122009E5D9A /* GMLProxyFactory.m in Sources */,
 				4E7EBF981E1A4673001A57D0 /* CTResourceManager.swift in Sources */,
+				4EF3B76A1E221122009E5D9A /* GMLEvent.m in Sources */,
+				4EF3B7711E22112A009E5D9A /* CTAESTool.m in Sources */,
+				4EF3B7741E221136009E5D9A /* CTYouDaoTranslateTool.swift in Sources */,
+				4EF3B7731E221131009E5D9A /* CTHeartbeatManager.swift in Sources */,
 				4E7EBF931E1A45FA001A57D0 /* SuportsTool.swift in Sources */,
+				4EF3B7681E221122009E5D9A /* GMLCoreDispatcher.m in Sources */,
 				4E7EBF7D1E1A45CB001A57D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,14 +413,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EF3B7671E221122009E5D9A /* GMLCoreDispatcher.m in Sources */,
+				4EF3B7761E22216E009E5D9A /* PushNotificationToolDemo.swift in Sources */,
 				4EEEA9901E165FAB0098CA01 /* AssetsExportDemoViewController.swift in Sources */,
+				4EF3B7591E221112009E5D9A /* CTYouDaoTranslateTool.swift in Sources */,
 				4EEEA9811E1636E60098CA01 /* AssetsExportTool.swift in Sources */,
 				4EEEA97C1E1605660098CA01 /* CTLoader.swift in Sources */,
+				4EF3B7691E221122009E5D9A /* GMLEvent.m in Sources */,
+				4EF3B76F1E221122009E5D9A /* GMLProxyFactory.m in Sources */,
+				4EF3B76B1E221122009E5D9A /* GMLExtension.m in Sources */,
+				4EF3B76D1E221122009E5D9A /* GMLProxy.m in Sources */,
+				4EF3B77B1E222179009E5D9A /* PushNotificationTool_Mac.swift in Sources */,
 				4EEEA99A1E166BFB0098CA01 /* DropView.swift in Sources */,
+				4EF3B77C1E222179009E5D9A /* URLOpenTool.swift in Sources */,
+				4EF3B77A1E222179009E5D9A /* CrashCheckTool.swift in Sources */,
+				4EF3B7581E221112009E5D9A /* CTHeartbeatManager.swift in Sources */,
 				4EF7808D1E18BEDC0047EAD1 /* CTResourceManager.swift in Sources */,
 				4EEEA9841E163DB10098CA01 /* CTErrorEnum.swift in Sources */,
 				4EEEA96D1E1603720098CA01 /* ViewController.swift in Sources */,
 				4EEEA96B1E1603720098CA01 /* AppDelegate.swift in Sources */,
+				4EF3B7561E221112009E5D9A /* CTAESTool.m in Sources */,
 				4EEEA99C1E1674260098CA01 /* Tishi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,7 +479,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gml.aaaa.KidForIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = KidForIPad/KidForIOSHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = KidForIOS/KidForIOSHeader.h;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -408,7 +496,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gml.aaaa.KidForIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = KidForIPad/KidForIOSHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = KidForIOS/KidForIOSHeader.h;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -550,6 +638,7 @@
 				4E7EBF8B1E1A45CB001A57D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E91319B1E12699500D6B2AB /* Build configuration list for PBXProject "KidForIPad" */ = {
 			isa = XCConfigurationList;

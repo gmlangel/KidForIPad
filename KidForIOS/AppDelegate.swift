@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         opt.needbadge = true;
         opt.needSound = true;
         opt.needCarPlay = true
-        PushNotificationTool().ginit(opt);
+        PushNotificationTool.instance.ginit(opt);
         
         return true
     }

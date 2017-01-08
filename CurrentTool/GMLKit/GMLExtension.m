@@ -9,7 +9,17 @@
 #import "GMLExtension.h"
 #import "GMLCoreDispatcher.h"
 #import "GMLEvent.h"
+
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+@implementation UIResponder (GMLKitExtension)
+#elif (TARGET_OS_MAC && !TARGET_OS_SIMULATOR)
+#import <AppKit/AppKit.h>
 @implementation NSResponder (GMLKitExtension)
+#elif(TARGET_OS_IOS || (TARGET_OS_MAC && TARGET_OS_SIMULATOR))
+#import <UIKit/UIKit.h>
+@implementation UIResponder (GMLKitExtension)
+#endif
 
 -(GMLCoreDispatcher * __nullable)gml_delegate{
     return nil;

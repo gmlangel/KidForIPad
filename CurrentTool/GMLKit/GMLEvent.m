@@ -18,11 +18,11 @@
     return _data;
 }
 
--(NSResponder * __nullable)target{
+-(NSObject * __nullable)target{
     return _target;
 }
 
--(instancetype)initWithEventType:(NSString *)_et target:(NSResponder * __nullable)_tg data:(id __nullable)_da
+-(instancetype)initWithEventType:(NSString *)_et target:(NSObject * __nullable)_tg data:(id __nullable)_da
 {
     self = [super init];
     if(self){

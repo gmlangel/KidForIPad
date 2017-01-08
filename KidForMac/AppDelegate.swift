@@ -17,8 +17,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         CTResourceManager.instance.deleteAllResource();
         PushNotificationTool_Mac.instance.ginit();
-        PushNotificationTool_Mac.instance.checkIsOpenByUserNotification(aNotification);
-        //let res = CTResource();
+        PushNotificationTool_Mac.instance.checkIsOpenByUserNotification(appDidFinishNotifycation: aNotification);
+
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -31,24 +31,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApplication.shared().mainWindow?.contentViewController?.presentViewControllerAsModalWindow(vc);
     }
 
-    func application(application: NSApplication, didReceiveRemoteNotification userInfo: [String : AnyObject]) {
+    private func application(application: NSApplication, didReceiveRemoteNotification userInfo: [String : AnyObject]) {
         NSLog("收到一条远程通知")
-        let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] + "/test.txt";
+        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/test.txt";
         let str = "\(userInfo)";
         do{
-            try str.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding);
+            try str.write(toFile: path, atomically: true, encoding: String.Encoding.utf8);
         }catch{
         
         }
     }
     
-    func application(application: NSApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-        NSLog("成功获得了device push token:%@",deviceToken);
+    func application(_ application: NSApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        NSLog("成功获得了device push token:\(deviceToken)");
         //一定要将deviceToken传给服务器，否则远程通知不生效
     }
     
-    func application(application: NSApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-        NSLog("获取device push token失败，原因:%@",error.description);
+    func application(_ application: NSApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        NSLog("获取device push token失败，原因:%@",error.localizedDescription);
     }
 }
 

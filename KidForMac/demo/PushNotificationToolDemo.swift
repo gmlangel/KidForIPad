@@ -20,8 +20,8 @@ class PushNotificationToolDemo: NSObject {
         notifyEntity.delay = 5;
         notifyEntity.localNotifyKey = "myNotify2";
         notifyEntity.awaysShow = true;
-        let notify = PushNotificationTool_Mac.instance.makeLocalNotification(notifyEntity);
-        NSUserNotificationCenter.defaultUserNotificationCenter().scheduleNotification(notify);
+        let notify = PushNotificationTool_Mac.instance.makeLocalNotification(notifyEntity: notifyEntity);
+        NSUserNotificationCenter.default.scheduleNotification(notify);
         return;
     }
 }

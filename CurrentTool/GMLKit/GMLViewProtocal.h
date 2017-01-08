@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
 @protocol GMLViewProtocal <NSObject>
 
 /**
@@ -41,7 +40,7 @@
 /**
  屏幕自适应
  */
--(void)gml_resize:(NSSize)size;
+-(void)gml_resize:(CGFloat)w height:(CGFloat)h;
 
 /**
  清空所有与自己有关的引用，等待ARC。

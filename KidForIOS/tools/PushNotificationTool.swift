@@ -192,7 +192,7 @@ class PushNotificationTool: NSObject,UNUserNotificationCenterDelegate {
     
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        //ios 10.0 收到一个推送通知
+        //ios 10.0 处理用户点击推送面板时的操作
         let userInfo = response.notification.request.content.userInfo;
         let request = response.notification.request; // 收到推送的请求
         let content = request.content; // 收到推送的消息内容
@@ -203,10 +203,10 @@ class PushNotificationTool: NSObject,UNUserNotificationCenterDelegate {
         let title = content.title;  // 推送消息的标题
         if let trigger = request.trigger{
             if trigger.isKind(of: UNPushNotificationTrigger.self){
-                NSLog("iOS10 收到远程通知:\(userInfo)");
+                NSLog("iOS10 正要处理远程通知:\(userInfo)");
             }else{
                 // 判断为本地通知
-                NSLog("iOS10 收到本地通知\nbody:\(body)\ntitle:\(title)\nsubtitle:\(subtitle)\nbadge:\(badge)\nsound:\(sound)\nuserInfo:\(userInfo)");
+                NSLog("iOS10 正要处理本地通知\nbody:\(body)\ntitle:\(title)\nsubtitle:\(subtitle)\nbadge:\(badge)\nsound:\(sound)\nuserInfo:\(userInfo)");
             }
         }
         completionHandler();  // 系统要求执行这个方法
@@ -214,7 +214,7 @@ class PushNotificationTool: NSObject,UNUserNotificationCenterDelegate {
     
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        //ios 10.0 处理用户点击推送面板时的操作
+        //ios 10.0 收到一个推送通知
         let userInfo = notification.request.content.userInfo;
         let request = notification.request; // 收到推送的请求
         let content = request.content; // 收到推送的消息内容

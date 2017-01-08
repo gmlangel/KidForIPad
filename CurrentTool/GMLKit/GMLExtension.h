@@ -7,10 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+@class GMLCoreDispatcher,GMLEvent;
+@interface UIResponder(GMLKitExtension)
+#elif (TARGET_OS_MAC && !TARGET_OS_SIMULATOR)
 #import <AppKit/AppKit.h>
 @class GMLCoreDispatcher,GMLEvent;
-
 @interface NSResponder(GMLKitExtension)
+#elif(TARGET_OS_IOS || (TARGET_OS_MAC && TARGET_OS_SIMULATOR))
+#import <UIKit/UIKit.h>
+@class GMLCoreDispatcher,GMLEvent;
+@interface UIResponder(GMLKitExtension)
+#endif
 
 /**
  GMLKit的事件处理对象,想要addEvent，removeEvent就必须重写这个函数

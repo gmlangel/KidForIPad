@@ -6,13 +6,29 @@
 //  Copyright © 2016年 guominglong. All rights reserved.
 //
 
-#import <AppKit/AppKit.h>
 #import "GMLExtension.h"
 #import "GMLCoreDispatcher.h"
+
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+@interface GMLProxy : UIResponder
+{
+    GMLCoreDispatcher * _gmlDis;
+}
+#elif (TARGET_OS_MAC && !TARGET_OS_SIMULATOR)
+#import <AppKit/AppKit.h>
 @interface GMLProxy : NSResponder
 {
     GMLCoreDispatcher * _gmlDis;
 }
+#elif(TARGET_OS_IOS || (TARGET_OS_MAC && TARGET_OS_SIMULATOR))
+#import <UIKit/UIKit.h>
+@interface GMLProxy : UIResponder
+{
+    GMLCoreDispatcher * _gmlDis;
+}
+#endif
+
 
 
 /**
