@@ -11,6 +11,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "MainProxy.makeWindow(String, vc : BaseViewController, style : NSWindowStyleMask) -&gt; BaseWindow:MainProxy.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "win.contentView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AssetsExportTool.(exportAssetsByPath(String, targetPath : String, onComplete : () -&gt; (), onError : (NSError) -&gt; ()) -&gt; ()).(closure #1):AssetsExportTool.swift">
          <PersistentStrings>
             <PersistentString

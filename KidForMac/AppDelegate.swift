@@ -12,7 +12,10 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
 
-
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        MainProxy.instance.start();
+    }
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         CTResourceManager.instance.deleteAllResource();
