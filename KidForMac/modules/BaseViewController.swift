@@ -9,8 +9,6 @@
 import Foundation
 class BaseViewController: NSViewController {
     override func viewWillAppear() {
-        这句话不好用，得自己写居中
-        self.view.window?.center();
     }
     
     override func viewDidAppear() {

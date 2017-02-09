@@ -23,5 +23,10 @@ class ViewController: NSViewController {
     }
 
 
+    override func viewDidAppear() {
+        if let win = self.view.window{
+            NSLog("%lu", win.styleMask.rawValue);
+        }
+    }
 }
 

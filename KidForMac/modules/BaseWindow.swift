@@ -11,7 +11,7 @@ import Foundation
 /**
  默认的window窗口样式
  */
-let WINDOW_STYLE_MASK_DEFAULT:NSWindowStyleMask = NSWindowStyleMask(rawValue: NSWindowStyleMask.closable.rawValue|NSWindowStyleMask.miniaturizable.rawValue|NSWindowStyleMask.fullSizeContentView.rawValue|NSWindowStyleMask.resizable.rawValue|NSWindowStyleMask.texturedBackground.rawValue)
+let WINDOW_STYLE_MASK_DEFAULT:NSWindowStyleMask = NSWindowStyleMask(rawValue: NSWindowStyleMask.closable.rawValue|NSWindowStyleMask.miniaturizable.rawValue|NSWindowStyleMask.fullSizeContentView.rawValue|NSWindowStyleMask.resizable.rawValue|NSWindowStyleMask.texturedBackground.rawValue|NSWindowStyleMask.titled.rawValue)
 
 class BaseWindow:NSWindow,NSWindowDelegate{
     
@@ -20,7 +20,9 @@ class BaseWindow:NSWindow,NSWindowDelegate{
      */
     open var windowIdentifier:String = "";
     override init(contentRect: NSRect, styleMask style: NSWindowStyleMask, backing bufferingType: NSBackingStoreType, defer flag: Bool) {
-        super.init(contentRect: contentRect, styleMask: style, backing: bufferingType, defer: flag);
+        super.init(contentRect: contentRect, styleMask: WINDOW_STYLE_MASK_DEFAULT, backing: bufferingType, defer: flag);
+        self.backgroundColor = NSColor.white;
+        self.titlebarAppearsTransparent = true;
     }
 
 }

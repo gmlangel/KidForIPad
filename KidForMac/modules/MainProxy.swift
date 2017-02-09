@@ -27,7 +27,6 @@ class MainProxy: GMLProxy {
     func makeWindow(_ id:String,vc:BaseViewController,style:NSWindowStyleMask = WINDOW_STYLE_MASK_DEFAULT) -> BaseWindow{
         let winRect = vc.view.bounds;
         let win = BaseWindow(contentViewController: vc);
-        win.styleMask = style;
             //BaseWindow(contentRect: winRect, styleMask: style, backing: NSBackingStoreType.buffered, defer: false);
         win.windowIdentifier = id;
         win.contentView = vc.view;
